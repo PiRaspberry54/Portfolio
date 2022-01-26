@@ -1,4 +1,68 @@
-body {
-    margin: 0;
-    float: right;
+* {
+  font-size: 16px;
+  font-family: tangerine;
+  margin: 0;
 }
+
+header {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 265px;
+  background-color: #151a1e;
+}
+
+.banner-container {
+  display: flex;
+  height: 100vh;
+  width: calc(100vw - 265px);
+  background-color: orangered;
+}
+.banner-container img {
+  object-fit: fill;
+}
+
+nav p {
+  font-size: 90px;
+  color: white;
+  padding-left: 10px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  color: white;
+  padding-top: 50px;
+  padding-left: 17px;
+  margin: 0;
+}
+nav li {
+  text-transform: uppercase;
+  font-family: roboto;
+  display: flex;
+  padding-bottom: 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.logo {
+  display: flex;
+  border: 6px solid white;
+  border-radius: 50%;
+  height: 190px;
+  width: 190px;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
