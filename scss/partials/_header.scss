@@ -1,0 +1,101 @@
+* {
+    font-size: 16px;
+    font-family: tangerine;
+    margin: 0;
+}
+
+header {
+    display: flex;
+}
+
+.main-nav {
+    display: block;
+    position: fixed;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    background-color: #151a1e;
+//    align-items: center;
+}
+
+.main-nav {
+    p {
+        font-size: 90px;
+        color: white;
+        padding-left: 10px;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        color: white;
+        padding-top: 50px;
+        padding-left: 17px;
+        margin: 0;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        display: flex;
+        padding-bottom: 40px;
+        font-size: 1.3em;
+    }
+    a:hover {
+        text-decoration: underline;
+        text-decoration-color: orangered;
+    }
+    .logo-container a:hover {
+        text-decoration: none;
+        p {
+            color: orangered;
+        }
+        div {
+            border-color: orangered;
+        }
+    }
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.logo {
+    display: flex;
+    border: 6px solid white;
+    border-radius: 50%;
+    height: 190px;
+    width: 190px;
+    align-items: center;
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/stars-67616.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: calc(100vw - 250px);
+    padding-left: 250px;
+    color: white;
+    h2, h1{
+        font-family: sans-serif;
+        text-align: center;
+        vertical-align: middle;
+    }
+    h2 {
+        padding-top: 275px; 
+        font-size: 35px;
+    }
+    h1 {
+        padding-top: 15px;
+        font-size: 100px;
+    }
+}
