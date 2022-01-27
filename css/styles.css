@@ -9,12 +9,13 @@ header {
 }
 
 .main-nav {
-  display: block;
+  display: flex;
   position: fixed;
   flex-direction: column;
   height: 100vh;
   width: 250px;
   background-color: #151a1e;
+  border-right: 3px solid white;
 }
 
 .main-nav p {
@@ -27,7 +28,7 @@ header {
   flex-direction: column;
   list-style-type: none;
   color: white;
-  padding-top: 50px;
+  padding-top: 15px;
   padding-left: 17px;
   margin: 0;
 }
@@ -37,7 +38,7 @@ header {
   text-transform: uppercase;
   font-family: sans-serif;
   display: flex;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   font-size: 1.3em;
 }
 .main-nav a:hover {
@@ -52,6 +53,25 @@ header {
 }
 .main-nav .logo-container a:hover div {
   border-color: orangered;
+}
+.main-nav .social-media-links {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.main-nav .social-media-links .social {
+  display: flex;
+  flex-direction: row;
+  border-top: 3px solid white;
+}
+.main-nav .social-media-links a {
+  padding-right: 25px;
+  padding-bottom: 30px;
+}
+.main-nav .social-media-links a i {
+  font-size: 32px;
 }
 
 .logo-container {
