@@ -1,0 +1,9 @@
+@import './partials/variables';
+@import './partials/header2';
+
+main {
+    height: 100vh;
+    width: calc(100vw - 250px);
+    padding-left: 250px;
+    background-color: #202A44;
+}

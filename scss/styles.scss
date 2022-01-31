@@ -7,9 +7,13 @@
 
 
 main {
+    overflow-y: scroll;
+}
+
+.main-content {
     height: 100vh;
+//    height: 1000px;
     width: calc(100vw - 250px);
-    padding-left: 250px;
     background-color: #202A44;
 }
 
