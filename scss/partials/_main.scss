@@ -1,0 +1,40 @@
+main {
+    overflow-y: scroll;
+}
+
+.main-content {
+    height: 100vh;
+    background-color: #202A44;
+    border-right: 3px solid white;
+    .small-banner {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: white;
+    height: 25vh;
+    width: 100%;
+    color: white;
+    h1{
+        text-align: left;
+        font-size: 60px;
+        color: black;
+        margin: none;
+        }   
+    }   
+
+    .about {
+        background-image: url("../img/aboutme2.jpeg" );
+    }
+    .code {
+        background-image: url("../img/code.jpg" );
+        background-size: cover;
+    }
+    .scs {
+        background-image: url("../img/learning.jpeg" );
+        background-color: #0054af;
+    }
+}

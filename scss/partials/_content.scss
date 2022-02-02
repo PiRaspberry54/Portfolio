@@ -1,0 +1,99 @@
+.about-content {
+    display: flex;
+    flex-direction: column;
+    height: 68%;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-bottom: 6px solid orangered;
+    p {
+        text-align: center;
+        padding-top: 2%;
+        font-family: sans-serif;
+        color: #151a1e;
+    }
+    .html-css-sass, .html-logo, .css-logo, .sass-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-self: flex-end;
+        .html-logo {
+            display: flex;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: #e75822;
+            color: white;
+            align-items: center;
+            i {
+                font-size: 45px;
+            }
+        }
+        .css-logo {
+            display: flex;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: #1b73ba;
+            color: white;
+            align-items: center;
+            i {
+                font-size: 45px;
+            }
+        }
+        .sass-logo {
+            display: flex;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: #cd6699;
+            color: white;
+            align-items: center;
+            i {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+.code-content {
+    font-weight: bold;
+    display: flex;
+    h1 {
+        display: flex;
+        font-size: 60px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.scs-content {
+    display: flex;
+    margin-right: 20px;
+    margin-top: 20px;
+    div {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-bottom: 6px solid orangered;
+        border-radius: 5px;
+        margin-left: 20px;
+        text-align: center;
+        p, h1, li {
+            font-family: sans-serif;
+        }
+    }
+    ul {
+        margin: 0; 
+        list-style-type: none;
+        li {
+            text-indent: -5px;
+        }
+        &> li:before {
+            content: "-";
+            text-indent: -5px;
+        }
+    }
+}

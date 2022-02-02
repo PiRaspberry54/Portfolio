@@ -4,18 +4,9 @@
   margin: 0;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: row;
-  overflow-y: none;
-}
-
-header {
-  display: flex;
-}
-
 .main-nav {
   display: none;
+  position: fixed;
   flex-direction: column;
   height: 100vh;
   width: 250px;
@@ -104,7 +95,7 @@ header {
   background-position: center center;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: white;
 }
 .banner-container h2, .banner-container h1 {
@@ -121,13 +112,14 @@ header {
   font-size: 100px;
 }
 
-@media screen and (min-width: 768px) {
-  .main-nav {
-    display: flex;
+@media screen and (min-width: 992px) {
+  main {
+    margin-left: 250px;
+    width: calc(100vw - 250px);
   }
 
-  .banner-container {
-    width: calc(100vw - 250px);
+  .main-nav {
+    display: flex;
   }
 }
 main {
@@ -136,8 +128,138 @@ main {
 
 .main-content {
   height: 100vh;
-  width: calc(100vw - 250px);
   background-color: #202A44;
+  border-right: 3px solid white;
+}
+.main-content .small-banner {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: white;
+  height: 25vh;
+  width: 100%;
+  color: white;
+}
+.main-content .small-banner h1 {
+  text-align: left;
+  font-size: 60px;
+  color: black;
+  margin: none;
+}
+.main-content .about {
+  background-image: url("../img/aboutme2.jpeg");
+}
+.main-content .code {
+  background-image: url("../img/code.jpg");
+  background-size: cover;
+}
+.main-content .scs {
+  background-image: url("../img/learning.jpeg");
+  background-color: #0054af;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  height: 68%;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border-bottom: 6px solid orangered;
+}
+.about-content p {
+  text-align: center;
+  padding-top: 2%;
+  font-family: sans-serif;
+  color: #151a1e;
+}
+.about-content .html-css-sass, .about-content .html-logo, .about-content .css-logo, .about-content .sass-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: flex-end;
+}
+.about-content .html-css-sass .html-logo, .about-content .html-logo .html-logo, .about-content .css-logo .html-logo, .about-content .sass-logo .html-logo {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #e75822;
+  color: white;
+  align-items: center;
+}
+.about-content .html-css-sass .html-logo i, .about-content .html-logo .html-logo i, .about-content .css-logo .html-logo i, .about-content .sass-logo .html-logo i {
+  font-size: 45px;
+}
+.about-content .html-css-sass .css-logo, .about-content .html-logo .css-logo, .about-content .css-logo .css-logo, .about-content .sass-logo .css-logo {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #1b73ba;
+  color: white;
+  align-items: center;
+}
+.about-content .html-css-sass .css-logo i, .about-content .html-logo .css-logo i, .about-content .css-logo .css-logo i, .about-content .sass-logo .css-logo i {
+  font-size: 45px;
+}
+.about-content .html-css-sass .sass-logo, .about-content .html-logo .sass-logo, .about-content .css-logo .sass-logo, .about-content .sass-logo .sass-logo {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #cd6699;
+  color: white;
+  align-items: center;
+}
+.about-content .html-css-sass .sass-logo i, .about-content .html-logo .sass-logo i, .about-content .css-logo .sass-logo i, .about-content .sass-logo .sass-logo i {
+  font-size: 45px;
+}
+
+.code-content {
+  font-weight: bold;
+  display: flex;
+}
+.code-content h1 {
+  display: flex;
+  font-size: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.scs-content {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.scs-content div {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 6px solid orangered;
+  border-radius: 5px;
+  margin-left: 20px;
+  text-align: center;
+}
+.scs-content div p, .scs-content div h1, .scs-content div li {
+  font-family: sans-serif;
+}
+.scs-content ul {
+  margin: 0;
+  list-style-type: none;
+}
+.scs-content ul li {
+  text-indent: -5px;
+}
+.scs-content ul > li:before {
+  content: "-";
+  text-indent: -5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

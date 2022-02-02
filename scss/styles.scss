@@ -1,19 +1,8 @@
 //@import './partials/main';
 @import './partials/variables';
 @import './partials/header';
+@import './partials/main';
+@import './partials/content';
 //@import './partials/nav';
 //@import './partials/banner';
 //@import './partials/cards';
-
-
-main {
-    overflow-y: scroll;
-}
-
-.main-content {
-    height: 100vh;
-//    height: 1000px;
-    width: calc(100vw - 250px);
-    background-color: #202A44;
-}
-
