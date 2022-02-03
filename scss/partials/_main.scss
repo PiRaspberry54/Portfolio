@@ -1,30 +1,32 @@
+//Makes the main section scroll and the nav stays put. This is used for vertical scrolling. 
 main {
     overflow-y: scroll;
 }
-
+//The height and width of the main content. That all of the imformation is stored in. 
 .main-content {
     height: 100vh;
     background-color: #202A44;
     border-right: 3px solid white;
     .small-banner {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 3px solid white;
-    border-top: 3px solid white;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-color: white;
-    height: 25vh;
-    width: 100%;
-    color: white;
-    h1{
-        text-align: left;
-        font-size: 60px;
-        color: black;
-        margin: none;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-color: white;
+        height: 25vh;
+        width: 100%;
+        color: white;
+        h1{
+            text-align: left;
+            font-size: 60px;
+            color: black;
+            margin: none;
+            font-family: 'Tangerine';
+            }   
         }   
-    }   
 
     .about {
         background-image: url("../img/aboutme2.jpeg" );
@@ -37,4 +39,10 @@ main {
         background-image: url("../img/learning.jpeg" );
         background-color: #0054af;
     }
+}
+
+.main-content-two {
+    height: 300vh;
+    background-color: #202A44;
+    border-right: 3px solid white;
 }

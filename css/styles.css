@@ -1,6 +1,6 @@
 * {
   font-size: 16px;
-  font-family: tangerine;
+  font-family: "Roboto";
   margin: 0;
 }
 
@@ -18,6 +18,7 @@
   font-size: 90px;
   color: white;
   padding-left: 10px;
+  font-family: "Tangerine";
 }
 .main-nav ul {
   display: flex;
@@ -32,7 +33,6 @@
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: sans-serif;
   display: flex;
   padding-bottom: 30px;
   font-size: 1.3em;
@@ -76,6 +76,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 25px;
+  font-family: "Tangerine";
 }
 
 .logo {
@@ -85,6 +86,7 @@
   height: 190px;
   width: 190px;
   align-items: center;
+  font-family: "Tangerine";
 }
 
 .banner-container {
@@ -99,7 +101,6 @@
   color: white;
 }
 .banner-container h2, .banner-container h1 {
-  font-family: sans-serif;
   text-align: center;
   vertical-align: middle;
 }
@@ -149,6 +150,7 @@ main {
   font-size: 60px;
   color: black;
   margin: none;
+  font-family: "Tangerine";
 }
 .main-content .about {
   background-image: url("../img/aboutme2.jpeg");
@@ -162,6 +164,12 @@ main {
   background-color: #0054af;
 }
 
+.main-content-two {
+  height: 300vh;
+  background-color: #202A44;
+  border-right: 3px solid white;
+}
+
 .about-content {
   display: flex;
   flex-direction: column;
@@ -172,11 +180,11 @@ main {
   border-radius: 5px;
   margin-top: 20px;
   border-bottom: 6px solid orangered;
+  justify-content: space-between;
 }
 .about-content p {
   text-align: center;
   padding-top: 2%;
-  font-family: sans-serif;
   color: #151a1e;
 }
 .about-content .html-css-sass, .about-content .html-logo, .about-content .css-logo, .about-content .sass-logo {
@@ -248,7 +256,7 @@ main {
   text-align: center;
 }
 .scs-content div p, .scs-content div h1, .scs-content div li {
-  font-family: sans-serif;
+  font-family: "Roboto";
 }
 .scs-content ul {
   margin: 0;
@@ -260,6 +268,76 @@ main {
 .scs-content ul > li:before {
   content: "-";
   text-indent: -5px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+.cards .row, .cards .row2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 20px;
+}
+.cards .card1, .cards .card2, .cards .card3, .cards .card4, .cards .card5, .cards .card6 {
+  display: flex;
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 240px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  border-radius: 5px;
+  background-image: url("../img/coming-5942155.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #151a1e;
+}
+.form-container .touch, .form-container .form {
+  padding: 20px;
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: white;
+}
+.form-container .touch {
+  flex-direction: column;
+}
+.form-container .touch h1 {
+  font-weight: 900;
+}
+.form-container .form {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: white;
+}
+.form-container .form-element {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.form-container input[type=email], .form-container input[type=name], .form-container input[type=telephonenumber], .form-container textarea {
+  display: flex;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

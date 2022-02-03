@@ -1,9 +1,10 @@
+//This is the defualt styles that is applied to everything. I have removed margins from all of the elements and tags so I can control it. Made the font-size 16px.
 * {
     font-size: 16px;
-    font-family: tangerine;
+    font-family: 'Roboto';
     margin: 0;
 }
-
+//Container for nav. Has a white border on the right. 
 .main-nav {
     display: none;
     position: fixed;
@@ -15,35 +16,39 @@
 }
 
 .main-nav {
+    //Controls the size of the logo font and position within the circle. 
     p {
         font-size: 90px;
         color: white;
         padding-left: 10px;
+        font-family: 'Tangerine';
     }
     
+    //The navigation links names. Padding to seperate header from logo. Padding left for space between nav container and links. Removed default ul styles.
     ul {
         display: flex;
         flex-direction: column;
         list-style-type: none;
-//        align-content: space-around;
         color: white;
         padding-top: 25px;
         padding-left: 17px;
         margin: 0;
     }
+    //Anchor tag styled so navigation links look correct. 
     a {
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: sans-serif;
         display: flex;
         padding-bottom: 30px;
         font-size: 1.3em;
     }
+    //Styles added to the link on hover. 
     a:hover {
         text-decoration: underline;
         text-decoration-color: orangered;
     }
+    //Logo circle and font change colour when they hover over it. 
     .logo-container a:hover {
         text-decoration: none;
         p {
@@ -53,6 +58,7 @@
             border-color: orangered;
         }
     }
+    //Box created that contains the social media icons. Also positions the icons. 
     .social-media-links {
         display: flex;
         justify-content: flex-end;
@@ -60,12 +66,14 @@
         flex-direction: column;
         padding-left: 10px;
 //        border-top: 3px solid white;
+        //Box that applies the colours and space around the element in the box. 
         .social {
             display: flex;
             flex-direction: row;
             border-top: 3px solid white;
             padding-top: 10px;
         }
+        //Adds padding to icons and controls the size. 
         a {
             padding-right: 25px;
             padding-bottom: 30px;
@@ -75,14 +83,15 @@
         }
     }
 }
-
+//Logo container is container around the logo. Adds space around the element and affects the position of the logo.
 .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 25px;
+    font-family: 'Tangerine';
 }
-
+//The circle of the logo. Centers the elements inside of the container.
 .logo {
     display: flex;
     border: 6px solid white;
@@ -90,11 +99,11 @@
     height: 190px;
     width: 190px;
     align-items: center;
+    font-family: 'Tangerine';
 }
-
+//Banner container. Applied the universe background. 
 .banner-container {
     display: flex;
-//    position: relative;
     flex-direction: column;
     background-image: url("../img/stars-67616.jpg");
     background-repeat: no-repeat;
@@ -103,11 +112,12 @@
     height: 100vh;
     width: 100%;
     color: white;
+    //Text that is on the banner. 
     h2, h1{
-        font-family: sans-serif;
         text-align: center;
         vertical-align: middle;
     }
+    //Size and padding on the text.
     h2 {
         padding-top: 275px; 
         font-size: 35px;
@@ -117,7 +127,7 @@
         font-size: 100px;
     }
 }
-
+//Allowing the nav to appear at the correct size and making the main element the correct size. 
 @media screen and (min-width: $large) {
     main {
         margin-left: 250px;
