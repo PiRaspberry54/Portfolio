@@ -1,0 +1,44 @@
+// Contacts Container
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    background-color: #151a1e;
+    
+    .touch, .form {
+        padding: 20px;
+        display: flex;
+        color: white;
+        // align-items: center;
+    }
+    
+    .touch {
+        flex-direction: column;
+        h1 {
+            font-weight: 900;
+        }
+    }
+    
+    // Form Container
+    .form-container {
+        padding: 20px;
+        display: flex;
+        width: 100%;
+        color: white;
+    }
+    
+    // Form Element
+    form {
+        width: 100%;
+    }
+    
+    .form-element {
+        display: flex;
+        width: 100%;
+        // border: 2px solid grey;
+        
+        input {
+            width: 100%;
+        }
+    }
+} 
