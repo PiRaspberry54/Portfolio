@@ -113,7 +113,7 @@
     width: 100%;
     color: white;
     //Text that is on the banner. 
-    h2, h1{
+    h2, h1, h3{
         text-align: center;
         vertical-align: middle;
     }
@@ -125,6 +125,10 @@
     h1 {
         padding-top: 15px;
         font-size: 100px;
+    }
+    h3 {
+        padding-top: 15px;
+        font-size: 20px;
     }
 }
 //Allowing the nav to appear at the correct size and making the main element the correct size. 

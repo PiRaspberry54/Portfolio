@@ -100,7 +100,7 @@
   width: 100%;
   color: white;
 }
-.banner-container h2, .banner-container h1 {
+.banner-container h2, .banner-container h1, .banner-container h3 {
   text-align: center;
   vertical-align: middle;
 }
@@ -111,6 +111,10 @@
 .banner-container h1 {
   padding-top: 15px;
   font-size: 100px;
+}
+.banner-container h3 {
+  padding-top: 15px;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 992px) {
@@ -147,13 +151,15 @@ main {
 }
 .main-content .small-banner h1 {
   text-align: left;
-  font-size: 60px;
-  color: black;
-  margin: none;
+  font-size: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
   font-family: "Tangerine";
 }
 .main-content .about {
   background-image: url("../img/aboutme2.jpeg");
+  color: #202A44;
 }
 .main-content .code {
   background-image: url("../img/code.jpg");
@@ -233,6 +239,14 @@ main {
 .code-content {
   font-weight: bold;
   display: flex;
+  height: 68%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  background-color: white;
+  border-bottom: 6px solid orangered;
+  border-radius: 5px;
+  justify-content: center;
 }
 .code-content h1 {
   display: flex;
@@ -243,8 +257,8 @@ main {
 
 .scs-content {
   display: flex;
+  flex-wrap: wrap;
   margin-right: 20px;
-  margin-top: 20px;
 }
 .scs-content div {
   display: flex;
@@ -254,9 +268,8 @@ main {
   border-radius: 5px;
   margin-left: 20px;
   text-align: center;
-}
-.scs-content div p, .scs-content div h1, .scs-content div li {
-  font-family: "Roboto";
+  margin-top: 20px;
+  width: 100%;
 }
 .scs-content ul {
   margin: 0;
@@ -288,8 +301,8 @@ main {
   flex-shrink: 1;
   height: 240px;
   margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 389px;
+  margin-right: 389px;
   border-bottom: 3px solid white;
   border-left: 3px solid white;
   border-right: 3px solid white;

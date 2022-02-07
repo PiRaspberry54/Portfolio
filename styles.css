@@ -1,0 +1,49 @@
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #151a1e;
+}
+.form-container .touch, .form {
+    padding: 20px;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    color: white;
+}
+.touch {
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+    
+.form {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    color: white;
+}
+    
+.form-element {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-container input[type=email], .form-container input[type=name], .form-container input[type=telephonenumber],  .form-container formtextarea  {
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+/*
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+*/
+}

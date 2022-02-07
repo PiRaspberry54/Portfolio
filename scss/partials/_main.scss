@@ -21,15 +21,17 @@ main {
         color: white;
         h1{
             text-align: left;
-            font-size: 60px;
-            color: black;
-            margin: none;
+            font-size: 100px;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
             font-family: 'Tangerine';
             }   
         }   
 
     .about {
         background-image: url("../img/aboutme2.jpeg" );
+        color: #202A44;
     }
     .code {
         background-image: url("../img/code.jpg" );
