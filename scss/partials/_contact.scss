@@ -16,7 +16,24 @@
         flex-direction: column;
         h1 {
             font-weight: 900;
+            font-size: 45px;
+            padding-bottom: 20px;
         }
+        p {
+            font-size: 1.1rem;
+        }
+        .email-p {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-decoration: underline;
+            a {
+                color: white;
+                &:hover {
+                color: orangered;
+                }
+            }
+        }
+        
     }
     
     // Form Container
@@ -35,10 +52,53 @@
     .form-element {
         display: flex;
         width: 100%;
-        // border: 2px solid grey;
-        
-        input {
+        input, textarea {
             width: 100%;
+            margin-bottom: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            font-family: 'Roboto';
+            border-radius: 20px;
+            border: 3px solid white;
+            &:focus {
+                outline-color: orangered;
+            }
+            &:hover {
+                border: 3px solid orangered;
+                color: black;
+            }
+        }
+        textarea {
+            padding-bottom: 80px;
         }
     }
 } 
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: orangered;
+    color: white;
+    height: 25px;
+    width: 100px;
+    border-radius: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    &:hover {
+        color: orangered;
+        background-color: white;
+    }
+    p {
+        text-align: center;
+        font-size: 1rem;
+        text-decoration: underline;
+        text-decoration-color: orangered;
+        font-weight: bold;
+    }
+    a {
+        text-decoration: underline;
+        text-decoration-color: orangered;
+    }
+}

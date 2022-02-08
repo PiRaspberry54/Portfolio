@@ -3,6 +3,7 @@
     font-size: 16px;
     font-family: 'Roboto';
     margin: 0;
+    box-sizing: border-box;
 }
 //Container for nav. Has a white border on the right. 
 .main-nav {
@@ -113,13 +114,16 @@
     width: 100%;
     color: white;
     //Text that is on the banner. 
-    h2, h1, h3{
+    .banner-text{
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        vertical-align: middle;
+        margin-top: auto;
+        margin-bottom: auto;
     }
     //Size and padding on the text.
     h2 {
-        padding-top: 275px; 
+        padding-top: 15px; 
         font-size: 35px;
     }
     h1 {
@@ -131,6 +135,75 @@
         font-size: 20px;
     }
 }
+.menu-position {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.menu-btn {
+    width: fit-content;
+    height: 63px;
+    color: white;
+    padding: 5px 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+    
+    border-radius: 3px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    // Burger Container
+.burger-container {
+    position: relative;
+    width: 100%;
+    margin: auto 0;
+    // border: 2px solid green; 
+
+    // Burger Lines
+    .menu-burger {
+        display: block;
+        position: relative;
+
+        width: 33px;
+        height: 3px;
+        background-color: white;
+
+        &::before,&::after {
+            content: "";
+            position: absolute;
+            left: 0;
+
+            width: 33px;
+            height: 3px;
+            background-color: white;
+        }
+
+        // Moves other 2 bars in correct position
+        &::before {
+            content: "";
+            transform: translateY(-8px);
+
+        }
+        &::after {
+            content: "";
+            transform: translateY(8px);
+        }
+    }
+}
+
+
+// Menu Title
+.menu-title {
+    font-size: 0.75rem; //12px
+}
+
+
+}
 //Allowing the nav to appear at the correct size and making the main element the correct size. 
 @media screen and (min-width: $large) {
     main {
@@ -139,5 +212,8 @@
     }
     .main-nav {
         display: flex;
+    }
+    .menu-position {
+        display: none;
     }
 }

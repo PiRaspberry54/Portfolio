@@ -2,6 +2,7 @@
   font-size: 16px;
   font-family: "Roboto";
   margin: 0;
+  box-sizing: border-box;
 }
 
 .main-nav {
@@ -100,12 +101,15 @@
   width: 100%;
   color: white;
 }
-.banner-container h2, .banner-container h1, .banner-container h3 {
+.banner-container .banner-text {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .banner-container h2 {
-  padding-top: 275px;
+  padding-top: 15px;
   font-size: 35px;
 }
 .banner-container h1 {
@@ -117,6 +121,59 @@
   font-size: 20px;
 }
 
+.menu-position {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.menu-btn {
+  width: fit-content;
+  height: 63px;
+  color: white;
+  padding: 5px 14px;
+  line-height: 1.5;
+  margin-left: 20px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-btn .burger-container {
+  position: relative;
+  width: 100%;
+  margin: auto 0;
+}
+.menu-btn .burger-container .menu-burger {
+  display: block;
+  position: relative;
+  width: 33px;
+  height: 3px;
+  background-color: white;
+}
+.menu-btn .burger-container .menu-burger::before, .menu-btn .burger-container .menu-burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 33px;
+  height: 3px;
+  background-color: white;
+}
+.menu-btn .burger-container .menu-burger::before {
+  content: "";
+  transform: translateY(-8px);
+}
+.menu-btn .burger-container .menu-burger::after {
+  content: "";
+  transform: translateY(8px);
+}
+.menu-btn .menu-title {
+  font-size: 0.75rem;
+}
+
 @media screen and (min-width: 992px) {
   main {
     margin-left: 250px;
@@ -125,6 +182,10 @@
 
   .main-nav {
     display: flex;
+  }
+
+  .menu-position {
+    display: none;
   }
 }
 main {
@@ -151,7 +212,7 @@ main {
 }
 .main-content .small-banner h1 {
   text-align: left;
-  font-size: 100px;
+  font-size: 120px;
   margin-top: auto;
   margin-bottom: auto;
   text-align: center;
@@ -171,9 +232,15 @@ main {
 }
 
 .main-content-two {
-  height: 300vh;
+  min-height: 100vh;
   background-color: #202A44;
   border-right: 3px solid white;
+}
+.main-content-two .projects {
+  font-size: 45px;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: white;
 }
 
 .about-content {
@@ -189,8 +256,12 @@ main {
   justify-content: space-between;
 }
 .about-content p {
+  font-size: 1.25rem;
+  line-height: 1.4;
   text-align: center;
-  padding-top: 2%;
+  padding-top: 5%;
+  padding-right: 20px;
+  padding-left: 20px;
   color: #151a1e;
 }
 .about-content .html-css-sass, .about-content .html-logo, .about-content .css-logo, .about-content .sass-logo {
@@ -198,6 +269,7 @@ main {
   flex-direction: row;
   justify-content: space-evenly;
   align-self: flex-end;
+  margin-bottom: 15px;
 }
 .about-content .html-css-sass .html-logo, .about-content .html-logo .html-logo, .about-content .css-logo .html-logo, .about-content .sass-logo .html-logo {
   display: flex;
@@ -287,7 +359,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-.cards .row, .cards .row2 {
+.cards .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -296,24 +368,77 @@ main {
 }
 .cards .card1, .cards .card2, .cards .card3, .cards .card4, .cards .card5, .cards .card6 {
   display: flex;
-  flex-basis: 100%;
   flex-grow: 1;
   flex-shrink: 1;
-  height: 240px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 315px;
   margin-bottom: 20px;
-  margin-left: 389px;
-  margin-right: 389px;
+  margin-left: 20px;
+  margin-right: 20px;
   border-bottom: 3px solid white;
   border-left: 3px solid white;
   border-right: 3px solid white;
   border-top: 3px solid white;
   border-radius: 5px;
-  background-image: url("../img/coming-5942155.jpg");
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
+.cards .card1:hover, .cards .card2:hover, .cards .card3:hover, .cards .card4:hover, .cards .card5:hover, .cards .card6:hover {
+  border-bottom: 3px solid orangered;
+}
+.cards .card1 p, .cards .card2 p, .cards .card3 p, .cards .card4 p, .cards .card5 p, .cards .card6 p {
+  font-size: 1.4rem;
+}
+.cards .card1 a, .cards .card2 a, .cards .card3 a, .cards .card4 a, .cards .card5 a, .cards .card6 a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 2px;
+  padding-top: 3px;
+}
+.cards .card1 a:hover, .cards .card2 a:hover, .cards .card3 a:hover, .cards .card4 a:hover, .cards .card5 a:hover, .cards .card6 a:hover {
+  text-decoration: underline;
+}
+.cards .card1 a p, .cards .card2 a p, .cards .card3 a p, .cards .card4 a p, .cards .card5 a p, .cards .card6 a p {
+  font-size: 0.9rem;
+  padding-right: 3px;
+}
+.cards .card1 a i, .cards .card2 a i, .cards .card3 a i, .cards .card4 a i, .cards .card5 a i, .cards .card6 a i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
+.card1 {
+  background-image: url("../img/website1.png");
+}
+
+.card2 {
+  background-image: url("../img/netmatters.png");
+}
+
+.card3, .card4, .card5, .card6 {
+  background-image: url("../img/coming-5942155.jpg");
+}
+
+@media screen and (min-width: 0px) {
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    flex-basis: 33.3%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    flex-basis: 25%;
+  }
+}
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -330,6 +455,22 @@ main {
 }
 .contact-container .touch h1 {
   font-weight: 900;
+  font-size: 45px;
+  padding-bottom: 20px;
+}
+.contact-container .touch p {
+  font-size: 1.1rem;
+}
+.contact-container .touch .email-p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-decoration: underline;
+}
+.contact-container .touch .email-p a {
+  color: white;
+}
+.contact-container .touch .email-p a:hover {
+  color: orangered;
 }
 .contact-container .form-container {
   padding: 20px;
@@ -344,8 +485,53 @@ main {
   display: flex;
   width: 100%;
 }
-.contact-container .form-element input {
+.contact-container .form-element input, .contact-container .form-element textarea {
   width: 100%;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-family: "Roboto";
+  border-radius: 20px;
+  border: 3px solid white;
+}
+.contact-container .form-element input:focus, .contact-container .form-element textarea:focus {
+  outline-color: orangered;
+}
+.contact-container .form-element input:hover, .contact-container .form-element textarea:hover {
+  border: 3px solid orangered;
+  color: black;
+}
+.contact-container .form-element textarea {
+  padding-bottom: 80px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: orangered;
+  color: white;
+  height: 25px;
+  width: 100px;
+  border-radius: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.button:hover {
+  color: orangered;
+  background-color: white;
+}
+.button p {
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-color: orangered;
+  font-weight: bold;
+}
+.button a {
+  text-decoration: underline;
+  text-decoration-color: orangered;
 }
 
 /*# sourceMappingURL=styles.css.map */

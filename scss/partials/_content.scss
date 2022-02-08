@@ -10,8 +10,12 @@
     border-bottom: 6px solid orangered;
     justify-content: space-between;
     p {
+        font-size: 1.25rem;
+        line-height: 1.4;
         text-align: center;
-        padding-top: 2%;
+        padding-top: 5%;
+        padding-right: 20px;
+        padding-left: 20px;
         color: #151a1e;
     }
     .html-css-sass, .html-logo, .css-logo, .sass-logo {
@@ -19,6 +23,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-self: flex-end;
+        margin-bottom: 15px;
         .html-logo {
             display: flex;
             height: 60px;
@@ -108,7 +113,7 @@
 .cards {
     display: flex;
     flex-direction: column;
-    .row, .row2 {
+    .row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -117,21 +122,77 @@
     }
     .card1, .card2, .card3, .card4, .card5, .card6 {
         display: flex;
-        flex-basis: 100%;
         flex-grow: 1;
         flex-shrink: 1;
-        height: 240px;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        height: 315px;
         margin-bottom: 20px;
-        margin-left: 389px;
-        margin-right: 389px;
+        margin-left: 20px;
+        margin-right: 20px;
         border-bottom: 3px solid white;
         border-left: 3px solid white;
         border-right: 3px solid white;
         border-top: 3px solid white;
         border-radius: 5px;
-        background-image: url("../img/coming-5942155.jpg");
+        background-color: white;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
-    } 
+        &:hover {
+            border-bottom: 3px solid orangered;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        a {
+            display: flex;
+            text-decoration: none;
+            color: black;
+            padding-bottom: 2px;
+            padding-top: 3px;
+            &:hover {
+                text-decoration: underline;
+            }
+            p {
+                font-size: 0.9rem;
+                padding-right: 3px;
+            }
+            i {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+    }
+}
+
+.card1 {
+    background-image: url("../img/website1.png");
+}
+
+.card2 {
+    background-image: url("../img/netmatters.png");
+}
+
+.card3, .card4, .card5, .card6 {
+    background-image: url("../img/coming-5942155.jpg");
+}
+
+@media screen and (min-width: 0px) {
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        flex-basis: 33.3%;
+    }
+}
+
+@media screen and (min-width: $extra-large) {
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        flex-basis: 25%;
+    }
 }
