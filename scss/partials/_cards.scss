@@ -1,0 +1,86 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        height: 315px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-top: 3px solid white;
+        border-radius: 5px;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        &:hover {
+            border-bottom: 3px solid orangered;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        a {
+            display: flex;
+            text-decoration: none;
+            color: black;
+            padding-bottom: 2px;
+            padding-top: 3px;
+            &:hover {
+                text-decoration: underline;
+            }
+            p {
+                font-size: 0.9rem;
+                padding-right: 3px;
+            }
+            i {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+    }
+}
+
+.card1 {
+    background-image: url("../img/website1.png");
+}
+
+.card2 {
+    background-image: url("../img/netmatters.png");
+}
+
+.card3, .card4, .card5, .card6 {
+    background-image: url("../img/coming-5942155.jpg");
+}
+
+@media screen and (min-width: 0px) {
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        flex-basis: 33.3%;
+    }
+}
+
+@media screen and (min-width: $extra-large) {
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        flex-basis: 25%;
+    }
+}

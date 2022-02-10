@@ -54,3 +54,34 @@ main {
         color: white;
     }
 }
+
+.scs-style {
+    min-height: 100vh;
+    background-color: whitesmoke;
+    border-right: 3px solid white;
+    .small-banner {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-color: white;
+        height: 25vh;
+        width: 100%;
+        color: white;
+        h1{
+            text-align: left;
+            font-size: 120px;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            font-family: 'Tangerine';
+            }   
+        }
+    .scs {
+        background-image: url("../img/learning.jpeg" );
+        background-color: #0054af;
+    }
+}

@@ -3,6 +3,7 @@
   font-family: "Roboto";
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .main-nav {
@@ -243,15 +244,105 @@ main {
   color: white;
 }
 
+.scs-style {
+  min-height: 100vh;
+  background-color: whitesmoke;
+  border-right: 3px solid white;
+}
+.scs-style .small-banner {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: white;
+  height: 25vh;
+  width: 100%;
+  color: white;
+}
+.scs-style .small-banner h1 {
+  text-align: left;
+  font-size: 120px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  font-family: "Tangerine";
+}
+.scs-style .scs {
+  background-image: url("../img/learning.jpeg");
+  background-color: #0054af;
+}
+
+.inner-container {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .inner-container {
+    width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .inner-container {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inner-container {
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.inner-container-two {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .inner-container-two {
+    width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .inner-container-two {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inner-container-two {
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .about-content {
   display: flex;
   flex-direction: column;
-  height: 68%;
+  height: 100%;
+  width: 100%;
   background-color: white;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 5px;
-  margin-top: 20px;
   border-bottom: 6px solid orangered;
   justify-content: space-between;
 }
@@ -311,7 +402,8 @@ main {
 .code-content {
   font-weight: bold;
   display: flex;
-  height: 68%;
+  height: 100%;
+  width: 100%;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 20px;
@@ -330,18 +422,22 @@ main {
 .scs-content {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 20px;
 }
 .scs-content div {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #202A44;
+  color: white;
   border-bottom: 6px solid orangered;
   border-radius: 5px;
-  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   margin-top: 20px;
   width: 100%;
+}
+.scs-content div h1 {
+  font-size: 35px;
 }
 .scs-content ul {
   margin: 0;
@@ -481,11 +577,11 @@ main {
 .contact-container form {
   width: 100%;
 }
-.contact-container .form-element {
+.contact-container .form-element, .contact-container .form-element1, .contact-container .form-element2 {
   display: flex;
   width: 100%;
 }
-.contact-container .form-element input, .contact-container .form-element textarea {
+.contact-container .form-element input, .contact-container .form-element textarea, .contact-container .form-element1 input, .contact-container .form-element1 textarea, .contact-container .form-element2 input, .contact-container .form-element2 textarea {
   width: 100%;
   margin-bottom: 20px;
   padding-top: 5px;
@@ -495,15 +591,25 @@ main {
   border-radius: 20px;
   border: 3px solid white;
 }
-.contact-container .form-element input:focus, .contact-container .form-element textarea:focus {
+.contact-container .form-element input:focus, .contact-container .form-element textarea:focus, .contact-container .form-element1 input:focus, .contact-container .form-element1 textarea:focus, .contact-container .form-element2 input:focus, .contact-container .form-element2 textarea:focus {
   outline-color: orangered;
 }
-.contact-container .form-element input:hover, .contact-container .form-element textarea:hover {
+.contact-container .form-element input:hover, .contact-container .form-element textarea:hover, .contact-container .form-element1 input:hover, .contact-container .form-element1 textarea:hover, .contact-container .form-element2 input:hover, .contact-container .form-element2 textarea:hover {
   border: 3px solid orangered;
   color: black;
 }
-.contact-container .form-element textarea {
+.contact-container .form-element textarea, .contact-container .form-element1 textarea, .contact-container .form-element2 textarea {
   padding-bottom: 80px;
+}
+
+.name {
+  display: flex;
+}
+.name .form-element1 {
+  padding-right: 5px;
+}
+.name .form-element2 {
+  padding-left: 5px;
 }
 
 .button {
@@ -532,6 +638,16 @@ main {
 .button a {
   text-decoration: underline;
   text-decoration-color: orangered;
+}
+
+.contact {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
