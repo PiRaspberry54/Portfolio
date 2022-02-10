@@ -1,8 +1,9 @@
 .scs-content {
     display: flex;
     flex-wrap: wrap;
-    div {
+    .scion-scheme, .netmatters, .treehouse {
         display: flex;
+        height: 300px;
         flex-direction: column;
         background-color: #202A44;
         color: white;
@@ -15,17 +16,65 @@
         width: 100%;
         h1 {
             font-size: 35px;
+            padding-top: 10px;
+            padding-bottom: 20px;
         }
+        p {
+            line-height: 1.4rem;
+        }
+    }
+    .position-centre {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .treehouse {
+        height: 450px;
     }
     ul {
         margin: 0; 
         list-style-type: none;
         li {
             text-indent: -5px;
+            padding-bottom: 5px;
         }
         &> li:before {
             content: "-";
             text-indent: -5px;
         }
+    }
+    .badges-position {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+    }
+    .badges-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .badge1, .badge2, .badge3, .badge4, .badge5{
+            img {
+              height: 100px;
+
+            }
+        }
+   }
+}
+
+.two {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: $extra-large) {
+    .two {
+        display: flex;
+        flex-direction: row;
+        .scion-scheme {
+            margin-right: 10px;
+        }
+        .netmatters {
+            margin-left: 10px;
+        }
+
     }
 }

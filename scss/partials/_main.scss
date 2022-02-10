@@ -1,6 +1,7 @@
 //Makes the main section scroll and the nav stays put. This is used for vertical scrolling. 
 main {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 //The height and width of the main content. That all of the imformation is stored in. 
 .main-content {
