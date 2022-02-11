@@ -136,6 +136,7 @@
   padding: 5px 14px;
   line-height: 1.5;
   margin-left: 20px;
+  background-color: #151a1e;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -213,7 +214,7 @@ main {
 }
 .main-content .small-banner h1 {
   text-align: left;
-  font-size: 120px;
+  font-size: 100px;
   margin-top: auto;
   margin-bottom: auto;
   text-align: center;
@@ -425,7 +426,7 @@ main {
 }
 .scs-content .scion-scheme, .scs-content .netmatters, .scs-content .treehouse {
   display: flex;
-  height: 300px;
+  height: 350px;
   flex-direction: column;
   background-color: #202A44;
   color: white;
@@ -445,12 +446,34 @@ main {
 .scs-content .scion-scheme p, .scs-content .netmatters p, .scs-content .treehouse p {
   line-height: 1.4rem;
 }
+.scs-content .scion-scheme a, .scs-content .netmatters a, .scs-content .treehouse a {
+  display: flex;
+  text-decoration: none;
+  align-self: center;
+  color: white;
+  padding-bottom: 2px;
+  padding-top: 3px;
+}
+.scs-content .scion-scheme a:hover, .scs-content .netmatters a:hover, .scs-content .treehouse a:hover {
+  color: orangered;
+}
+.scs-content .scion-scheme a p, .scs-content .netmatters a p, .scs-content .treehouse a p {
+  font-size: 0.9rem;
+  padding-right: 3px;
+}
+.scs-content .scion-scheme a i, .scs-content .netmatters a i, .scs-content .treehouse a i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .scs-content .position-centre {
   margin-top: auto;
   margin-bottom: auto;
 }
 .scs-content .treehouse {
   height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .scs-content ul {
   margin: 0;
@@ -464,15 +487,15 @@ main {
   content: "-";
   text-indent: -5px;
 }
-.scs-content .badges-position {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-}
 .scs-content .badges-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-evenly;
+  align-self: flex-end;
+  margin-bottom: 15px;
+}
+.scs-content .badges-container .badge1, .scs-content .badges-container .badge2, .scs-content .badges-container .badge3, .scs-content .badges-container .badge4, .scs-content .badges-container .badge5 {
+  display: flex;
 }
 .scs-content .badges-container .badge1 img, .scs-content .badges-container .badge2 img, .scs-content .badges-container .badge3 img, .scs-content .badges-container .badge4 img, .scs-content .badges-container .badge5 img {
   height: 100px;

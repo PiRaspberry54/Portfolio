@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     .scion-scheme, .netmatters, .treehouse {
         display: flex;
-        height: 300px;
+        height: 350px;
         flex-direction: column;
         background-color: #202A44;
         color: white;
@@ -22,6 +22,25 @@
         p {
             line-height: 1.4rem;
         }
+        a {
+            display: flex;
+            text-decoration: none;
+            align-self: center;
+            color: white;
+            padding-bottom: 2px;
+            padding-top: 3px;
+            &:hover {
+                color: orangered;
+            }
+            p {
+                font-size: 0.9rem;
+                padding-right: 3px;
+            }
+            i {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
     }
     .position-centre {
         margin-top: auto;
@@ -29,6 +48,9 @@
     }
     .treehouse {
         height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     ul {
         margin: 0; 
@@ -42,16 +64,19 @@
             text-indent: -5px;
         }
     }
-    .badges-position {
-        display: flex;
-        flex-direction: column;
-        align-self: flex-end;
-    }
+//    .badges-position {
+//        display: flex;
+//        flex-direction: column;
+//        align-self: flex-end;
+//    }
     .badges-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: space-evenly;
+        align-self: flex-end;
+        margin-bottom: 15px;
         .badge1, .badge2, .badge3, .badge4, .badge5{
+            display: flex;
             img {
               height: 100px;
 
