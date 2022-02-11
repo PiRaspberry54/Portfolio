@@ -108,6 +108,15 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+.banner-container .scroll-bottom {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-bottom: 5vh;
+}
+.banner-container .scroll-bottom img {
+  width: 45px;
+}
 .banner-container h2 {
   padding-top: 15px;
   font-size: 35px;
@@ -175,6 +184,22 @@
   font-size: 0.75rem;
 }
 
+.scroll-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+}
+.scroll-bottom .up {
+  width: 45px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 @media screen and (min-width: 992px) {
   main {
     margin-left: 250px;
@@ -190,7 +215,6 @@
   }
 }
 main {
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -348,8 +372,8 @@ main {
   justify-content: space-between;
 }
 .about-content p {
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.3;
   text-align: center;
   padding-top: 5%;
   padding-right: 20px;
@@ -548,7 +572,7 @@ main {
   background-color: white;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
 }
 .cards .card1:hover, .cards .card2:hover, .cards .card3:hover, .cards .card4:hover, .cards .card5:hover, .cards .card6:hover {
   border-bottom: 3px solid orangered;
@@ -559,7 +583,6 @@ main {
 .cards .card1 a, .cards .card2 a, .cards .card3 a, .cards .card4 a, .cards .card5 a, .cards .card6 a {
   display: flex;
   text-decoration: none;
-  color: black;
   padding-bottom: 2px;
   padding-top: 3px;
 }
@@ -578,9 +601,30 @@ main {
 .card1 {
   background-image: url("../img/website1.png");
 }
+.card1 a {
+  color: black;
+}
+.card1 a p {
+  color: black;
+}
+.card1 a i {
+  color: black;
+}
 
 .card2 {
   background-image: url("../img/netmatters.png");
+}
+.card2 p {
+  color: white;
+}
+.card2 a {
+  color: white;
+}
+.card2 a p {
+  color: white;
+}
+.card2 a i {
+  color: white;
 }
 
 .card3, .card4, .card5, .card6 {

@@ -122,6 +122,15 @@
         margin-top: auto;
         margin-bottom: auto;
     }
+    .scroll-bottom {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding-bottom: 5vh;
+        img {
+            width: 45px;
+        }
+    }
     //Size and padding on the text.
     h2 {
         padding-top: 15px; 
@@ -202,8 +211,22 @@
 .menu-title {
     font-size: 0.75rem; //12px
 }
+}
 
-
+.scroll-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    .up {
+        width: 45px;
+        -webkit-transform:rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
 }
 //Allowing the nav to appear at the correct size and making the main element the correct size. 
 @media screen and (min-width: $large) {
