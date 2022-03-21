@@ -36,6 +36,20 @@
             </div>
         </div>
     </nav>
+        <ul>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="index.html#project-section">My Portfolio</a></li>
+            <li><a href="coding-examples.html">Coding Examples</a></li>
+            <li><a href="scs.html">SCS Scheme</a></li>
+            <li><a href="index.html#contact-section">Contact Me</a></li>
+        </ul>
+        <div class="menu-btn">
+            <div class="burger-container">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <span class="menu-title text-uppercase">MENU</span>
+        </div>
+    </nav>
     <main>
         <div id="top" class="banner-container">
             <div class="menu-position">
@@ -50,7 +64,10 @@
             <div class="banner-text">
                 <h2>Hi My Name is,</h2>
                 <h1>Jasmine</h1>
-                <h3>I'm a trainee Web Developer </h3>
+                <div class="typing-container">
+                    <h3 id="text"></h3>
+                    <span class="input-cursor"></span>
+                </div>
             </div>
             <div class="scroll-bottom">
                 <a href="index.html#contact-section">
@@ -83,6 +100,9 @@
                 </div>
             </div>
             <div id="contact-section"class="contact-container">
+                <div class="completedForm">
+                    <h1>Thank you getting into contact we will reply within 24 hours.</h1>
+                </div>
                 <div class="inner-container contact">
                     <div class="touch">
                         <h1>GET IN TOUCH</h1>
@@ -95,25 +115,47 @@
                             <div class="name">
                                 <div class="form-element1">
             <!--                      <label for="first">Firstname:</label>-->
-                                  <input type="name" id="first" placeholder="Enter Firstname" name="first">
+                                  <input type="name" id="first" placeholder="Enter Firstname" name="first" id="firstname">
+                                    <div class="validation-container">
+                                        <h3><strong>This is a required field *</strong></h3>
+                                     </div>
                                 </div>
+                                        
                                 <div class="form-element2">
             <!--                      <label for="last">Surname:</label>-->
-                                  <input type="name" id="last" placeholder="Enter Surname" name="last">
+                                  <input type="name" id="last" placeholder="Enter Surname" name="last" id="surname">
+                                    <div class="validation-container">
+                                        <h3><strong>This is a required field *</strong></h3>
+                                    </div>
                                 </div>
                             </div>
-                              <div class="form-element">
+                            <div class="form-element">
         <!--                      <label for="email">Email:</label>-->
-                              <input type="email" id="email" placeholder="Enter Email" name="email">
+                              <input type="email" id="email" placeholder="Enter Email" name="email" id="email">
                             </div>
+                            
+                                <div class="validation-container">
+                                    <h3><strong>This is a required field *</strong></h3>
+                                </div>
+                            
                             <div class="form-element">
         <!--                      <label for="tele">Mobile Phone Number:</label>-->
-                              <input type="subject" id="subject" placeholder="Enter Subject" name="subject">
+                              <input type="subject" id="subject" placeholder="Enter Subject" name="subject" id="subject">
                             </div>
+                            
+                                <div class="validation-container">
+                                    <h3><strong>This is a required field *</strong></h3>
+                                </div>
+                            
                             <div class="form-element">
-                                <textarea placeholder="Message"></textarea>
+                                <textarea id="message" placeholder="Message"></textarea>
                             </div>
-                            <a href="#"><div class="button"><p>Submit</p></div></a>
+                            
+                                <div class="validation-container">
+                                    <h3><strong>This is a required field *</strong></h3>
+                                </div>
+                            
+                            <a href="#form-element"><div class="button"><p>Submit</p></div></a>
                       </form>
                     </div><!-- form --> 
                 </div>
@@ -125,5 +167,8 @@
             </div>
         </div>
     </main>
+    <script src="js/app.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 </html>

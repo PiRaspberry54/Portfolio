@@ -1,0 +1,23 @@
+.typing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    .input-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 28px;
+      background-color: white;
+      margin-left: 4px;
+    }
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+// Then, inside .input-cursor:
+.input-cursor { 
+  animation: blink .6s linear infinite alternate;
+}
