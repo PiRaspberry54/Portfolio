@@ -26,7 +26,7 @@ function loop () {
             j--;
         }
         
-        if(j == phrases[i].length-1) {
+        if(j == phrases[i].length-1 && i != 3) {
             isDeleting = true;
         } 
         
