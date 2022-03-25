@@ -8,7 +8,9 @@ const $subject = $("#subject");
 const $message = $("#message");
 
 $('.button').on('click', function() {
-    $("#firstname").css("border", "3px solid red");
+    while ($firstName !=== ''){
+        $("#firstname").css("border", "3px solid red");
+           }
 });
 
 //$(".completedForm").hide().slideDown(2000).delay(3000).slideUp(1000);
