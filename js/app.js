@@ -42,4 +42,4 @@ function loop () {
 
 loop(); //Calling the function
 
-$(".typing-container").style().display(none); //Not currently working.
+//$(".typing-container").style().display(none); //Not currently working.
