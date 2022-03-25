@@ -8,7 +8,8 @@ const $subject = $("#subject");
 const $message = $("#message");
 
 $('.button').on('click', function() {
-    while ($firstName !=== ''){
+    $(".completedForm").hide().fadeIn(2000).delay(3000).fadeOut(1000);
+    if ($firstName !== ''){
         $("#firstname").css("border", "3px solid red");
            }
 });
