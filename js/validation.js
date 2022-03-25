@@ -1,18 +1,45 @@
-//Variables to store the different input fields values that it collects when the user presses the submit button. Button is all stored here in order to detect when it has been clicked. 
-
-const $button = $(".button");
-const $firstName = $("#firstname");
-const $surname = $("#surname");
-const $email = $("#email");
-const $subject = $("#subject");
-const $message = $("#message");
-
-$('.button').on('click', function() {
-    $(".completedForm").hide().fadeIn(2000).delay(3000).fadeOut(1000);
-    if ($firstName !== ''){
-        $("#firstname").css("border", "3px solid red");
-           }
+$('#submit-contact-form-button').on('click', function() {
+    var wholeFormValid = true;
+    wholeFormValid = ValidateRequiredField(firstname, firstname_required_text) && wholeFormValid;
+    wholeFormValid = ValidateRequiredField(surname, surname_required_text) && wholeFormValid;
+    if(wholeFormValid) {
+        FadeThankYouInAndOut();
+    }
 });
 
-//$(".completedForm").hide().slideDown(2000).delay(3000).slideUp(1000);
-$(".completedForm").hide().fadeIn(2000).delay(3000).fadeOut(1000);
+function FadeThankYouInAndOut() {
+    $("#form-submitted-thank-you")
+        .hide()
+        .fadeIn(2000)
+        .delay(3000)
+        .fadeOut(1000);
+}
+// Validates that the field passed is not blank,
+// and shows / hides "required" text.
+// and other styling as appropriate
+// Returns:
+// true if valid
+// falsse if invalid
+function ValidateRequiredField(fieldId, requiredTextId) {
+    if(IsBlank(fieldId)){
+        ShowRequiredTextAndStyle(fieldId, requiredTextId);
+        return false;
+    }
+    HideRequiredTextAndStyle(fieldId, requiredTextId);
+    return true;
+}
+
+function IsBlank(fieldId){
+    var fieldValue = $(fieldId).val();
+    return fieldValue == '' ? true : false;
+}
+
+function ShowRequiredTextAndStyle(fieldId, requiredTextId){
+    $(requiredTextId).show();
+    $(fieldId).css("border", "3px solid red");
+}
+
+function HideRequiredTextAndStyle(fieldId, requiredTextId){
+    $(requiredTextId).hide();
+    $(fieldId).css("border", "none");
+}
