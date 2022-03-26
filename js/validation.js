@@ -8,9 +8,11 @@ BindValidationToSubmitButton();
 function BindValidationToSubmitButton() {
     $('#submit-contact-form-button').on('click', function() {
         var wholeFormValid = true;
-        wholeFormValid = ValidateRequiredField(firstname, firstname_required_text) && wholeFormValid;
-        wholeFormValid = ValidateRequiredField(surname, surname_required_text) && wholeFormValid;
-        wholeFormValid = ValidateRequiredField(surname, surname_required_text) && wholeFormValid;
+        wholeFormValid = ValidateRequiredField('firstname', 'firstname-required-text') && wholeFormValid;
+        wholeFormValid = ValidateRequiredField('surname', 'surname-required-text') && wholeFormValid;
+        wholeFormValid = ValidateRequiredField('email', 'email-required-text') && wholeFormValid;
+        wholeFormValid = ValidateRequiredField('subject', 'subject-required-text') && wholeFormValid;
+        wholeFormValid = ValidateRequiredField('message', 'message-required-text') && wholeFormValid;
         
         if(wholeFormValid) {
             FadeThankYouInAndOut();
@@ -30,6 +32,7 @@ function BindValidationToSubmitButton() {
 */
 
 function ValidateRequiredField(fieldId, requiredTextId, regEx) {
+    console.log("fieldId: " + fieldId);
     if(IsBlank(fieldId) || !ConformsToRegex(fieldId)) {
         ShowRequiredTextAndStyle(fieldId, requiredTextId);
         return false;
@@ -40,7 +43,8 @@ function ValidateRequiredField(fieldId, requiredTextId, regEx) {
 }
 
 function IsBlank(fieldId) {
-    var fieldValue = $(fieldId).val();
+    var fieldValue = $("#" + fieldId).val();
+    console.log("fieldValue: " + fieldValue);
     return fieldValue == '' ? true : false;
 }
 
@@ -49,13 +53,13 @@ function ConformsToRegex(fieldId) {
 }
 
 function ShowRequiredTextAndStyle(fieldId, requiredTextId){
-    $(requiredTextId).show();
-    $(fieldId).css("border", "3px solid red");
+    $("#" + requiredTextId).show();
+    $("#" + fieldId).css("border", "3px solid red");
 }
 
 function HideRequiredTextAndStyle(fieldId, requiredTextId){
-    $(requiredTextId).hide();
-    $(fieldId).css("border", "none");
+    $("#" + requiredTextId).hide();
+    $("#" + fieldId).css("border", "none");
 }
 
 function FadeThankYouInAndOut() {
