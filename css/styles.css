@@ -768,7 +768,7 @@ main {
 }
 .contact-container .form-element input, .contact-container .form-element textarea, .contact-container .form-element1 input, .contact-container .form-element1 textarea, .contact-container .form-element2 input, .contact-container .form-element2 textarea {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
@@ -790,7 +790,7 @@ main {
 .validation-container {
   display: flex;
   padding-bottom: 10px;
-  margin-top: -5px;
+  margin-top: 5px;
 }
 .validation-container {
   color: red;
@@ -808,7 +808,7 @@ main {
   flex-direction: column;
 }
 
-.button {
+#submit-contact-form-button, .button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -817,7 +817,7 @@ main {
   height: 25px;
   width: 100px;
   border-radius: 20px;
-  margin-top: auto;
+  margin-top: 20px;
   margin-bottom: auto;
 }
 .button:hover {

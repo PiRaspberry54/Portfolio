@@ -1,6 +1,5 @@
 /*
-Validation functions
-
+    Validation functions
 */
 
 BindValidationToSubmitButton();
@@ -8,11 +7,15 @@ BindValidationToSubmitButton();
 function BindValidationToSubmitButton() {
     $('#submit-contact-form-button').on('click', function() {
         var wholeFormValid = true;
-        wholeFormValid = ValidateRequiredField('firstname', 'firstname-required-text') && wholeFormValid;
-        wholeFormValid = ValidateRequiredField('surname', 'surname-required-text') && wholeFormValid;
-        wholeFormValid = ValidateRequiredField('email', 'email-required-text') && wholeFormValid;
-        wholeFormValid = ValidateRequiredField('subject', 'subject-required-text') && wholeFormValid;
-        wholeFormValid = ValidateRequiredField('message', 'message-required-text') && wholeFormValid;
+        wholeFormValid = ValidateField('firstname', 'firstname-required-text') && wholeFormValid;
+        wholeFormValid = ValidateField('surname', 'surname-required-text') && wholeFormValid;
+        wholeFormValid = ValidateField('email', 
+                                        'email-required-text', 
+                                        /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/g,
+                                        'email-not-valid-text') 
+                            && wholeFormValid;
+        wholeFormValid = ValidateField('subject', 'subject-required-text') && wholeFormValid;
+        wholeFormValid = ValidateField('message', 'message-required-text') && wholeFormValid;
         
         if(wholeFormValid) {
             FadeThankYouInAndOut();
@@ -20,25 +23,36 @@ function BindValidationToSubmitButton() {
     });
 }
 
-/* Validates that the field passed is not blank.
-    Shows / hides "required" text
+/* Validates that the field passed is not blank,
+    and matches the regex (if passed)
+    Shows / hides "required" text, and / or "doesn't match the regex" text
     and applies / removes other styling as appropriate.
     Inputs:
-        fieldId         The ID of the element to validate
-        requiredTextId  The ID of the element to show if invalid / hide if valid 
+        fieldId                 The ID of the element to validate
+        requiredTextId          The ID of the element to show if invalid / hide if valid 
+        regex                   The regex to compare against
+        doesntMatchRegexTextId  The ID of the element to show if invalid / hide if valid
     Returns:
         true  if   valid
         false if invalid
 */
 
-function ValidateRequiredField(fieldId, requiredTextId, regEx) {
-    console.log("fieldId: " + fieldId);
-    if(IsBlank(fieldId) || !ConformsToRegex(fieldId)) {
-        ShowRequiredTextAndStyle(fieldId, requiredTextId);
+function ValidateField(fieldId, requiredTextId, regex, doesntMatchRegexTextId = null) {
+    HideNotValidatedStyle(fieldId);
+    if(!ValidateRequired(fieldId, requiredTextId)) { return false; }
+    HideRequiredText(requiredTextId);
+    if(!ValidateAgainstRegex(fieldId, regex, doesntMatchRegexTextId)){ return false; }
+    HideDoesntMatchRegexTextId(doesntMatchRegexTextId);
+
+    return true;
+}
+
+function ValidateRequired(fieldId, requiredTextId) {
+    if(IsBlank(fieldId)) {
+        ShowRequiredText(requiredTextId);
+        ShowNotValidatedStyle(fieldId);
         return false;
     }
-
-    HideRequiredTextAndStyle(fieldId, requiredTextId);
     return true;
 }
 
@@ -48,19 +62,43 @@ function IsBlank(fieldId) {
     return fieldValue == '' ? true : false;
 }
 
-function ConformsToRegex(fieldId) {
+function ShowRequiredText(requiredTextId) {
+    $("#" + requiredTextId).show();
+}
+function HideRequiredText(requiredTextId) {
+    if(requiredTextId == null) { return true; }
+    $("#" + requiredTextId).hide();
+}
+function ShowNotValidatedStyle(fieldId) {
+    $("#" + fieldId).css("border", "3px solid red");
+}
+function HideNotValidatedStyle(fieldId) {
+    $("#" + fieldId).css("border", "none");
+}
+function ShowDoesntMatchRegexTextId(doesntMatchRegexTextId) {
+    $("#" + doesntMatchRegexTextId).show();
+}
+function HideDoesntMatchRegexTextId(doesntMatchRegexTextId) {
+    $("#" + doesntMatchRegexTextId).hide();
+}
+
+function ValidateAgainstRegex(fieldId, regex = null, doesntMatchRegexTextId) {
+    if(regex == null) { return true; }
+    if(!MatchesRegex(fieldId, regex)) {
+        ShowDoesntMatchRegexTextId(doesntMatchRegexTextId);
+        ShowNotValidatedStyle(fieldId);
+        return false;
+    }
     return true;
 }
 
-function ShowRequiredTextAndStyle(fieldId, requiredTextId){
-    $("#" + requiredTextId).show();
-    $("#" + fieldId).css("border", "3px solid red");
+function MatchesRegex(fieldId, regex) {
+    const textToTest = $("#" + fieldId).val().toString();
+    const match = textToTest.match(regex);
+    console.log("Matches regex: " + match);
+    return match != null;
 }
 
-function HideRequiredTextAndStyle(fieldId, requiredTextId){
-    $("#" + requiredTextId).hide();
-    $("#" + fieldId).css("border", "none");
-}
 
 function FadeThankYouInAndOut() {
     $("#form-submitted-thank-you")
