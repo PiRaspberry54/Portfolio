@@ -1,7 +1,7 @@
 .top-nav {
   display: none;
   height: 15vh;
-  wdith: 100%;
+  width: 100%;
   background-color: #151a1e;
   color: white;
   border-bottom: 3px solid white;
@@ -710,7 +710,7 @@ main {
   padding-top: 20px;
   background-color: #151a1e;
 }
-.contact-container .completedForm {
+#form-submitted-thank-you {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -721,7 +721,7 @@ main {
   width: 100%;
   border-radius: 5px;
 }
-.contact-container .completedForm h1 {
+#form-submitted-thank-you h1 {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
@@ -768,7 +768,7 @@ main {
 }
 .contact-container .form-element input, .contact-container .form-element textarea, .contact-container .form-element1 input, .contact-container .form-element1 textarea, .contact-container .form-element2 input, .contact-container .form-element2 textarea {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
@@ -790,9 +790,9 @@ main {
 .validation-container {
   display: flex;
   padding-bottom: 10px;
-  margin-top: -5px;
+  margin-top: 5px;
 }
-.validation-container h3 {
+.validation-container {
   color: red;
 }
 
@@ -808,7 +808,7 @@ main {
   flex-direction: column;
 }
 
-.button {
+#submit-contact-form-button, .button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -817,7 +817,7 @@ main {
   height: 25px;
   width: 100px;
   border-radius: 20px;
-  margin-top: auto;
+  margin-top: 20px;
   margin-bottom: auto;
 }
 .button:hover {

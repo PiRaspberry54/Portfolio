@@ -36,6 +36,7 @@
             </div>
         </div>
     </nav>
+    <nav>
         <ul>
             <li><a href="about.html">About me</a></li>
             <li><a href="index.html#project-section">My Portfolio</a></li>
@@ -76,7 +77,7 @@
             </div>
         </div>
         <div class="main-content-two">
-            <h1 id="project-section"class="projects">Projects</h1>
+            <h1 id="project-section" class="projects">Projects</h1>
             <div class="cards">
                 <div class="row">
                     <div class="card1">
@@ -99,8 +100,8 @@
                     <div class="card6"></div>
                 </div>
             </div>
-            <div id="contact-section"class="contact-container">
-                <div class="completedForm">
+            <div id="contact-section" class="contact-container">
+                <div id="form-submitted-thank-you" style="display: none">
                     <h1>Thank you getting into contact we will reply within 24 hours.</h1>
                 </div>
                 <div class="inner-container contact">
@@ -108,25 +109,25 @@
                         <h1>GET IN TOUCH</h1>
                         <p>If you want to get in touch with me. Here is how you can do it...</p>
                         <p class="email-p"><a href="mailto:jasmine.howes@netmatters-scs.com" target="_blank">JASMINE.HOWES@NETMATTERS-SCS.COM</a></p>
-                        <P>Or you can contact me using the form provided. I look forward to hearing from you!</P>
+                        <p>Or you can contact me using the form provided. I look forward to hearing from you!</p>
                     </div>
                     <div class="form-container">
                         <form action="#">
                             <div class="name">
                                 <div class="form-element1">
-            <!--                      <label for="first">Firstname:</label>-->
-                                  <input type="name" placeholder="Enter Firstname" name="first" id="firstname">
-                                    <div class="validation-container">
-                                        <h3><strong>This is a required field *</strong></h3>
-                                     </div>
+            <!--                    <label for="first">Firstname:</label>-->
+                                    <input type="name" placeholder="Enter Firstname" name="first" id="firstname">
+                                    <p class="validation-container" id="firstname-required-text" style="display: none;">
+                                        This is a required field *
+                                    </p>
                                 </div>
                                         
                                 <div class="form-element2">
             <!--                      <label for="last">Surname:</label>-->
-                                  <input type="name" placeholder="Enter Surname" name="last" id="surname">
-                                    <div class="validation-container">
-                                        <h3><strong>This is a required field *</strong></h3>
-                                    </div>
+                                    <input type="name" placeholder="Enter Surname" name="last" id="surname">
+                                    <p class="validation-container" id="surname-required-text" style="display: none;">
+                                        This is a required field *
+                                    </p>
                                 </div>
                             </div>
                             <div class="form-element">
@@ -134,28 +135,31 @@
                               <input type="email" placeholder="Enter Email" name="email" id="email">
                             </div>
                             
-                                <div class="validation-container">
-                                    <h3><strong>This is a required field *</strong></h3>
-                                </div>
+                            <p class="validation-container" id="email-required-text" style="display: none;">
+                                This is a required field *
+                            </p>
+                            <p class="validation-container" id="email-not-valid-text" style="display: none;">
+                                Please enter a valid email address *
+                            </p>
                             
                             <div class="form-element">
         <!--                      <label for="tele">Mobile Phone Number:</label>-->
-                              <input type="subject" placeholder="Enter Subject" name="subject" id="subject">
+                                <input type="subject" placeholder="Enter Subject" name="subject" id="subject">
                             </div>
                             
-                                <div class="validation-container">
-                                    <h3><strong>This is a required field *</strong></h3>
-                                </div>
+                            <p class="validation-container" id="subject-required-text" style="display: none;">
+                                This is a required field *
+                            </p>
                             
                             <div class="form-element">
                                 <textarea id="message" placeholder="Message"></textarea>
                             </div>
                             
-                                <div class="validation-container">
-                                    <h3><strong>This is a required field *</strong></h3>
-                                </div>
+                            <p class="validation-container" id="message-required-text" style="display: none;">
+                                This is a required field *
+                            </p>
                             
-                            <a href="#form-element"><div class="button"><p>Submit</p></div></a>
+                            <a href="#form-element"><div id="submit-contact-form-button" class="button"><p>Submit</p></div></a>
                       </form>
                     </div><!-- form --> 
                 </div>
