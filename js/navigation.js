@@ -1,5 +1,7 @@
-const menuButton = $("menu-btn");
+const menuButton = $(".menu-btn");
+$(".top-nav").css("display", "none");
 
-menuButton.on("click", function(){
-    console.log("Hello the button works");
+menuButton.on("click", function() {
+    $(".top-nav").css("display", "flex");
+    console.log("Hello button");
 });

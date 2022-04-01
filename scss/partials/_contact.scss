@@ -20,14 +20,13 @@
             font-size: 1.3rem;
         }
     }
-    
-    .touch, .form {
+    .touch,
+    .form {
         padding: 20px;
         display: flex;
         color: white;
         // align-items: center;
     }
-    
     .touch {
         flex-direction: column;
         h1 {
@@ -45,13 +44,11 @@
             a {
                 color: white;
                 &:hover {
-                color: orangered;
+                    color: orangered;
                 }
             }
         }
-        
     }
-    
     // Form Container
     .form-container {
         padding: 20px;
@@ -59,16 +56,17 @@
         width: 100%;
         color: white;
     }
-    
     // Form Element
     form {
         width: 100%;
     }
-    
-    .form-element, .form-element1, .form-element2 {
+    .form-element,
+    .form-element1,
+    .form-element2 {
         display: flex;
         width: 100%;
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             margin-bottom: 20px;
             padding-top: 5px;

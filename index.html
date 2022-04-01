@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!--    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">-->
+    <!--    <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
     <title>Jasmine's Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Tangerine:wght@700&family=Work+Sans:wght@200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/230fdafe42.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="main-container">
     <nav class="main-nav">
         <div class="logo-container">
@@ -36,6 +38,8 @@
             </div>
         </div>
     </nav>
+    <!--
+    <nav class="top-nav">
         <ul>
             <li><a href="about.html">About me</a></li>
             <li><a href="index.html#project-section">My Portfolio</a></li>
@@ -50,6 +54,7 @@
             <span class="menu-title text-uppercase">MENU</span>
         </div>
     </nav>
+-->
     <main>
         <div id="top" class="banner-container">
             <div class="menu-position">
@@ -76,7 +81,7 @@
             </div>
         </div>
         <div class="main-content-two">
-            <h1 id="project-section"class="projects">Projects</h1>
+            <h1 id="project-section" class="projects">Projects</h1>
             <div class="cards">
                 <div class="row">
                     <div class="card1">
@@ -99,8 +104,8 @@
                     <div class="card6"></div>
                 </div>
             </div>
-            <div id="contact-section"class="contact-container">
-                <div class="completedForm">
+            <div id="contact-section" class="contact-container">
+                <div class="completedForm" id="completedForm" style="display: none;">
                     <h1>Thank you getting into contact we will reply within 24 hours.</h1>
                 </div>
                 <div class="inner-container contact">
@@ -114,55 +119,71 @@
                         <form action="#">
                             <div class="name">
                                 <div class="form-element1">
-            <!--                      <label for="first">Firstname:</label>-->
-                                  <input type="name" placeholder="Enter Firstname" name="first" id="firstname">
-                                    <div class="validation-container">
+                                    <!--                      <label for="first">Firstname:</label>-->
+                                    <input type="name" placeholder="Enter Firstname" name="first" id="firstname">
+                                    <div class="validation-container" id="firstname-required-text" style="display: none;">
                                         <h3><strong>This is a required field *</strong></h3>
-                                     </div>
+                                    </div>
                                 </div>
-                                        
+
                                 <div class="form-element2">
-            <!--                      <label for="last">Surname:</label>-->
-                                  <input type="name" placeholder="Enter Surname" name="last" id="surname">
-                                    <div class="validation-container">
+                                    <!--                      <label for="last">Surname:</label>-->
+                                    <input type="name" placeholder="Enter Surname" name="last" id="surname">
+                                    <div class="validation-container" id="surname-required-text" style="display: none;">
                                         <h3><strong>This is a required field *</strong></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-element">
-        <!--                      <label for="email">Email:</label>-->
-                              <input type="email" placeholder="Enter Email" name="email" id="email">
+                                <!--                      <label for="email">Email:</label>-->
+                                <input type="email" placeholder="Enter Email" name="email" id="email">
                             </div>
-                            
-                                <div class="validation-container">
-                                    <h3><strong>This is a required field *</strong></h3>
-                                </div>
-                            
+
+                            <div class="validation-container" id="email-required-text" style="display: none;">
+                                <h3><strong>This is a required field *</strong></h3>
+                                <!-- <h3><strong>This isn't a valid email.</strong></h3> -->
+                            </div>
+
                             <div class="form-element">
-        <!--                      <label for="tele">Mobile Phone Number:</label>-->
-                              <input type="subject" placeholder="Enter Subject" name="subject" id="subject">
+                                <!--                      <label for="email">Phone Number:</label>-->
+                                <input type="number" placeholder="Enter Phone Number" name="phone" id="phone">
                             </div>
-                            
-                                <div class="validation-container">
-                                    <h3><strong>This is a required field *</strong></h3>
-                                </div>
-                            
+
+                            <div class="validation-container" id="phone-required-text" style="display: none;">
+                                <h3><strong>This is a required field *</strong></h3>
+                                <!-- <h3><strong>This is not a valid phone number.</strong></h3> -->
+                            </div>
+
+                            <div class="form-element">
+                                <!--                      <label for="tele">Mobile Phone Number:</label>-->
+                                <input type="subject" placeholder="Enter Subject" name="subject" id="subject">
+                            </div>
+
+                            <div class="validation-container" id="subject-required-text" style="display: none;">
+                                <h3><strong>This is a required field *</strong></h3>
+                            </div>
+
                             <div class="form-element">
                                 <textarea id="message" placeholder="Message"></textarea>
                             </div>
-                            
-                                <div class="validation-container">
-                                    <h3><strong>This is a required field *</strong></h3>
+
+                            <div class="validation-container" id="message-required-text" style="display: none;">
+                                <h3><strong>This is a required field *</strong></h3>
+                            </div>
+
+                            <a href="#form-element">
+                                <div class="button">
+                                    <p>Submit</p>
                                 </div>
-                            
-                            <a href="#form-element"><div class="button"><p>Submit</p></div></a>
-                      </form>
-                    </div><!-- form --> 
+                            </a>
+                        </form>
+                    </div>
+                    <!-- form -->
                 </div>
             </div>
             <div class="scroll-bottom">
                 <a href="index.html#top">
-                <img src="img/down-white-arrow-chevron-label-text-triangle-symbol-transparent-png-1040505.png" class="up">
+                    <img src="img/down-white-arrow-chevron-label-text-triangle-symbol-transparent-png-1040505.png" class="up">
                 </a>
             </div>
         </div>
@@ -172,4 +193,5 @@
     <script src="js/validation.js"></script>
     <script src="js/navigation.js"></script>
 </body>
+
 </html>
