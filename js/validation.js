@@ -30,6 +30,7 @@ $('.button').on('click', function() {
     wholeFormValid = validateField("phone", "phone-required-text") && wholeFormValid;
     wholeFormValid = validateField("subject", "subject-required-text") && wholeFormValid;
     wholeFormValid = validateField("message", "message-required-text") && wholeFormValid;
+    EmailregexCheck("email");
     if (wholeFormValid) {
         showAndHideThankYouMessage();
         clearFields("firstname");
@@ -62,8 +63,17 @@ function validateField(fieldID, requiredTextID) {
 }
 
 // Function for email address regex.
-function RegexCheck() {
+function EmailregexCheck(fieldID) {
     var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var emailToCheck = $("#" + fieldID).val().toString();
+    var match = emailToCheck.match(emailRegex);
+    if (!match == null) {
+        console.log("This is a valid email adress");
+    } else {
+        console.log("This isn't a valid email adress");
+    }
+    console.log("Just checking that the regexcheck function is actually being called and working", emailToCheck);
+    console.log(match);
 }
 
 //Function for phone regex.

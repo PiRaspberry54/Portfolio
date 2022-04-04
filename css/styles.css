@@ -1,6 +1,6 @@
 .top-nav {
-  display: flex;
-  height: 15vh;
+  display: none;
+  min-height: 15vh;
   width: 100%;
   background-color: #151a1e;
   color: white;
@@ -8,7 +8,8 @@
 }
 .top-nav ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-content: center;
   list-style-type: none;
   flex-wrap: wrap;
   width: 100%;
@@ -19,15 +20,24 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "Tangerine";
 }
 .top-nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+.top-nav ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: orangered;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .top-nav {
-    display: none;
+    display: flex;
   }
 }
 * {
@@ -47,12 +57,6 @@
   border-right: 3px solid white;
 }
 
-.main-nav p {
-  font-size: 90px;
-  color: white;
-  padding-left: 10px;
-  font-family: "Tangerine";
-}
 .main-nav ul {
   display: flex;
   flex-direction: column;
@@ -73,15 +77,6 @@
 .main-nav a:hover {
   text-decoration: underline;
   text-decoration-color: orangered;
-}
-.main-nav .logo-container a:hover {
-  text-decoration: none;
-}
-.main-nav .logo-container a:hover p {
-  color: orangered;
-}
-.main-nav .logo-container a:hover div {
-  border-color: orangered;
 }
 .main-nav .social-media-links {
   display: flex;
@@ -109,7 +104,27 @@
   flex-direction: column;
   align-items: center;
   padding-top: 25px;
+  padding-bottom: 25px;
+  margin: auto;
   font-family: "Tangerine";
+}
+.logo-container p {
+  font-size: 90px;
+  color: white;
+  padding-left: 10px;
+  font-family: "Tangerine";
+}
+.logo-container a {
+  text-decoration: none;
+}
+.logo-container a:hover {
+  text-decoration: none;
+}
+.logo-container a:hover p {
+  color: orangered;
+}
+.logo-container a:hover div {
+  border-color: orangered;
 }
 
 .logo {
