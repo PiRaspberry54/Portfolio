@@ -1,24 +1,6 @@
-//Variables to store the different input fields values that it collects when the user presses the submit button. Button is all stored here in order to detect when it has been clicked. 
-
-//let $button = $(".button");
-//let $firstName = $("#firstname").val;
-//let $surname = $("#surname").val;
-//let $email = $("#email").val;
-//let $subject = $("#subject").val;
-//let $message = $("#message").val;
-//
-//$('.button').on('click', function() {
-//    $(".completedForm").hide().fadeIn(2000).delay(3000).fadeOut(1000);
-//    if ($firstName !== ''){
-//        $("#firstname").css("border", "3px solid red");
-//           } else {
-//               
-//           }
-//});
-//
-////$(".completedForm").hide().slideDown(2000).delay(3000).slideUp(1000);
-//$(".completedForm").hide().fadeIn(2000).delay(3000).fadeOut(1000);
-
+// Global variables for use within the functions. In particular the regex function. 
+const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 //Function for the click button and used to go through each input field and check the validation.
 
 $('.button').on('click', function() {
@@ -27,10 +9,12 @@ $('.button').on('click', function() {
     wholeFormValid = validateField("firstname", "firstname-required-text");
     wholeFormValid = validateField("surname", "surname-required-text") && wholeFormValid;
     wholeFormValid = validateField("email", "email-required-text") && wholeFormValid;
+    wholeFormValid = checkAgainstRegex("email", emailRegex, "email-valid-text") && wholeFormValid;
+    wholeFormValid = checkAgainstRegex("phone", phoneRegex, "phone-valid-text") && wholeFormValid;
     wholeFormValid = validateField("phone", "phone-required-text") && wholeFormValid;
     wholeFormValid = validateField("subject", "subject-required-text") && wholeFormValid;
     wholeFormValid = validateField("message", "message-required-text") && wholeFormValid;
-    EmailregexCheck("email");
+    // emailRegexCheck("email");
     if (wholeFormValid) {
         showAndHideThankYouMessage();
         clearFields("firstname");
@@ -51,7 +35,7 @@ function validateField(fieldID, requiredTextID) {
     log("fieldValue = " + fieldValue);
     if (fieldValue == "") {
         log("Empty field");
-        fieldObject.css("border", "3px solid red");
+        fieldObject.css("border-color", "red");
         requiredTextObject.css("display", "flex");
         return false;
     } else {
@@ -62,18 +46,22 @@ function validateField(fieldID, requiredTextID) {
     }
 }
 
-// Function for email address regex.
-function EmailregexCheck(fieldID) {
-    var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// Function for email address and phone number regex.
+function checkAgainstRegex(fieldID, regex, requiredTextID) {
     var emailToCheck = $("#" + fieldID).val().toString();
-    var match = emailToCheck.match(emailRegex);
-    if (!match == null) {
-        console.log("This is a valid email adress");
+    var match = emailToCheck.match(regex);
+    var requiredTextObject = $("#" + requiredTextID);
+    // console.log("Just checking that the regexcheck function is actually being called and working", emailToCheck);
+    // console.log(match);
+    if (match !== null) {
+        console.log("This is a valid " + fieldID);
+        requiredTextObject.css("display", "none");
+        return true;
     } else {
-        console.log("This isn't a valid email adress");
+        console.log("This isn't a valid " + fieldID);
+        requiredTextObject.css("display", "flex");
+        return false;
     }
-    console.log("Just checking that the regexcheck function is actually being called and working", emailToCheck);
-    console.log(match);
 }
 
 //Function for phone regex.
@@ -85,7 +73,7 @@ function showAndHideThankYouMessage() {
 }
 
 function clearFields(fieldID) {
-    console.log("Placeholder for the clearFields function");
+    // console.log("Placeholder for the clearFields function");
     var fieldObject = $("#" + fieldID);
     var fieldValue = fieldObject.val("");
     // console.log(fieldObject);
