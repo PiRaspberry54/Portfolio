@@ -41,7 +41,6 @@
   justify-content: flex-end;
   padding-right: 20px;
   padding-top: 20px;
-  background-color: red;
 }
 
 .exit-button {
@@ -330,7 +329,7 @@ main {
 }
 
 .main-content {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #202A44;
   border-right: 3px solid white;
 }
@@ -538,21 +537,35 @@ main {
 .code-content {
   font-weight: bold;
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   background-color: white;
   border-bottom: 6px solid orangered;
   border-radius: 5px;
   justify-content: center;
 }
-.code-content h1 {
+.code-content .typewriter-effect,
+.code-content .validation-container {
   display: flex;
-  font-size: 60px;
-  margin-top: auto;
-  margin-bottom: auto;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+}
+.code-content .typewriter-effect h1,
+.code-content .validation-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.code-content > * {
+  overflow-x: auto;
 }
 
 .scs-content {

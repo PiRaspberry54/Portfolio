@@ -80,16 +80,69 @@
             </div>
             <div class="inner-container-two">
                 <div class="code-content">
-                    <pre><code class="language-javascript line-numbers">
+                    <div class="typewriter-effect">
+                        <h1>Typewriter effect</h1>
+                        <p>I have created a typewriter effect for my banner. Here you will find an example of this code.</p>
+                    </div>
+                    <pre><code class="language-javascript line-numbers rainbow-braces match-braces">
+                        //Fetching the element where I want the words and effect to happen. 
+                        const textDisplay = document.getElementById("text");
+                        const phrases = ["I enjoy learning",
+                                        "I enjoy coding",
+                                        "I enjoy problem solving",
+                                        "I am a trainee Web Developer"
+                        ];
+                        //Storing the four sentences that I want it to display. Storing it in a variable as an array.
+
+
+                        let  i = 0; //I is going to be used in a loop to go through element of the phrases array.
+                        let j = 0; //Ussed to run through each letter of the array element. 
+                        let currentPhrase = []; //Used as a placeholder to store the variable of the current string that the loop is running through. 
+                        let isDeleting = false; //Variable used to let the loop know when to stop the deleting loop.
+
+                        function loop () {
+                            textDisplay.innerHTML = currentPhrase.join('');    
+                            if (i < phrases.length) {
+
+                                if (!isDeleting && j <= phrases[i].length-1){
+                                    currentPhrase.push(phrases[i][j]); 
+                                    j++;
+                                } 
+                                
+                                if(isDeleting && j <= phrases[i].length-1) {
+                                    currentPhrase.pop(phrases[i][j]);
+                                    j--;
+                                }
+                                
+                                if(j == phrases[i].length-1 && i != 3) {
+                                    isDeleting = true;
+                                } 
+                                
+                                if (isDeleting && j === 0) {
+                                    currentPhrase = [];
+                                    isDeleting = false;
+                                    i++;
+                                } 
+                                
+                            }
+                            setTimeout(loop, 200);
+                        }
+
+                        loop(); //Calling the function
+                    </code></pre>
+                    <div class="validation-container">
+                        <h1>Form Validation code</h1>
+                        <p>Here you will find an example of some code that I have created for my form validation. It consists of functions that together work to check through the form and show appropriate messages at the correct time. It has been written
+                            in JavaSctipt. </p>
+                    </div>
+                    <pre><code class="language-javascript line-numbers rainbow-braces match-braces">
                         // Global variables for use within the functions. In particular the regex function. 
-                        const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))
-                        @((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                        const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                         const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
                         //Function for the click button and used to go through each input field and check the validation.
 
                         $('.button').on('click', function() {
                             var wholeFormValid = true;
-                            log("Submit button is pressed!");
                             wholeFormValid = validateField("firstname", "firstname-required-text");
                             wholeFormValid = validateField("surname", "surname-required-text") && wholeFormValid;
                             wholeFormValid = validateField("email", "email-required-text") && wholeFormValid;
@@ -98,7 +151,6 @@
                             wholeFormValid = validateField("phone", "phone-required-text") && wholeFormValid;
                             wholeFormValid = validateField("subject", "subject-required-text") && wholeFormValid;
                             wholeFormValid = validateField("message", "message-required-text") && wholeFormValid;
-                            // emailRegexCheck("email");
                             if (wholeFormValid) {
                                 showAndHideThankYouMessage();
                                 clearFields("firstname");
@@ -112,18 +164,14 @@
 
                         //Function for validation. 
                         function validateField(fieldID, requiredTextID) {
-                            log("Called validatedField()");
                             var fieldObject = $("#" + fieldID);
                             var requiredTextObject = $("#" + requiredTextID);
                             var fieldValue = fieldObject.val();
-                            log("fieldValue = " + fieldValue);
                             if (fieldValue == "") {
-                                log("Empty field");
                                 fieldObject.css("border-color", "red");
                                 requiredTextObject.css("display", "flex");
                                 return false;
                             } else {
-                                log("This field has a value");
                                 fieldObject.css("border-color", "white");
                                 requiredTextObject.css("display", "none");
                                 return true;
@@ -135,14 +183,10 @@
                             var emailToCheck = $("#" + fieldID).val().toString();
                             var match = emailToCheck.match(regex);
                             var requiredTextObject = $("#" + requiredTextID);
-                            // console.log("Just checking that the regexcheck function is actually being called and working", emailToCheck);
-                            // console.log(match);
                             if (match !== null) {
-                                console.log("This is a valid " + fieldID);
                                 requiredTextObject.css("display", "none");
                                 return true;
                             } else {
-                                console.log("This isn't a valid " + fieldID);
                                 requiredTextObject.css("display", "flex");
                                 return false;
                             }
@@ -154,12 +198,8 @@
                         }
 
                         function clearFields(fieldID) {
-                            // console.log("Placeholder for the clearFields function");
                             var fieldObject = $("#" + fieldID);
                             var fieldValue = fieldObject.val("");
-                            // console.log(fieldObject);
-                            // console.log(fieldValue);
-                            // $("#firstname")
                         }
 
                         clearFields();
