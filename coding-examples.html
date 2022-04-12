@@ -141,6 +141,7 @@
                         const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
                         //Function for the click button and used to go through each input field and check the validation.
 
+                        //Main function used for checking validation. If fields are all valid then the whole form is set to valid and submitted.
                         $('.button').on('click', function() {
                             var wholeFormValid = true;
                             wholeFormValid = validateField("firstname", "firstname-required-text");
@@ -151,6 +152,7 @@
                             wholeFormValid = validateField("phone", "phone-required-text") && wholeFormValid;
                             wholeFormValid = validateField("subject", "subject-required-text") && wholeFormValid;
                             wholeFormValid = validateField("message", "message-required-text") && wholeFormValid;
+                            // Used to check if the whole form is valid and if so moves on to the if statement below. Checks each input field against the relevant validation.
                             if (wholeFormValid) {
                                 showAndHideThankYouMessage();
                                 clearFields("firstname");
@@ -197,6 +199,7 @@
                             $(".completedForm").fadeIn(2000).delay(3000).fadeOut(1000);
                         }
 
+                        // Function that clears the field ready for a new entry and then will re-check. 
                         function clearFields(fieldID) {
                             var fieldObject = $("#" + fieldID);
                             var fieldValue = fieldObject.val("");
