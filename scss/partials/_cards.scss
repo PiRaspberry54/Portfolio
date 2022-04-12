@@ -8,7 +8,12 @@
         width: 100%;
         padding-top: 20px;
     }
-    .card1, .card2, .card3, .card4, .card5, .card6 {
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
         display: flex;
         flex-grow: 1;
         flex-shrink: 1;
@@ -17,8 +22,8 @@
         flex-direction: column;
         height: 315px;
         margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
         border-bottom: 3px solid white;
         border-left: 3px solid white;
         border-right: 3px solid white;
@@ -83,24 +88,42 @@
     }
 }
 
-.card3, .card4, .card5, .card6 {
+.card3,
+.card4,
+.card5,
+.card6 {
     background-image: url("../img/coming-5942155.jpg");
 }
 
 @media screen and (min-width: 0px) {
-    .card1, .card2, .card3, .card4, .card5, .card6 {
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
         flex-basis: 100%;
     }
 }
 
 @media screen and (min-width: $medium) {
-    .card1, .card2, .card3, .card4, .card5, .card6 {
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
         flex-basis: 33.3%;
     }
 }
 
 @media screen and (min-width: $extra-large) {
-    .card1, .card2, .card3, .card4, .card5, .card6 {
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
         flex-basis: 25%;
     }
 }

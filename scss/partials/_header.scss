@@ -1,245 +1,259 @@
-//This is the defualt styles that is applied to everything. I have removed margins from all of the elements and tags so I can control it. Made the font-size 16px.
-* {
-    font-size: 16px;
-    font-family: 'Roboto';
-    margin: 0;
-    box-sizing: border-box;
-    //    overflow-x: hidden;
-}
-
-//Container for nav. Has a white border on the right. 
-.main-nav {
-    display: none;
-    position: fixed;
-    flex-direction: column;
-    height: 100vh;
-    width: 250px;
-    background-color: #151a1e;
-    border-right: 3px solid white;
-}
-
-.main-nav {
-    //The navigation links names. Padding to seperate header from logo. Padding left for space between nav container and links. Removed default ul styles.
-    ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        color: white;
-        padding-top: 25px;
-        padding-left: 17px;
+    //This is the defualt styles that is applied to everything. I have removed margins from all of the elements and tags so I can control it. Made the font-size 16px.
+    * {
+        font-size: 16px;
+        font-family: 'Roboto';
         margin: 0;
+        box-sizing: border-box;
+        //    overflow-x: hidden;
     }
-    //Anchor tag styled so navigation links look correct. 
-    a {
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-        display: flex;
-        padding-bottom: 30px;
-        font-size: 1.3em;
-    }
-    //Styles added to the link on hover. 
-    a:hover {
-        text-decoration: underline;
-        text-decoration-color: orangered;
-    }
-    //Box created that contains the social media icons. Also positions the icons. 
-    .social-media-links {
-        display: flex;
-        justify-content: flex-end;
-        flex: 1;
+    
+    //Container for nav. Has a white border on the right. 
+    .main-nav {
+        display: none;
+        position: fixed;
         flex-direction: column;
-        padding-left: 10px;
-        //        border-top: 3px solid white;
-        //Box that applies the colours and space around the element in the box. 
-        .social {
+        height: 100vh;
+        width: 250px;
+        background-color: #151a1e;
+        border-right: 3px solid white;
+    }
+    
+    .main-nav {
+        //The navigation links names. Padding to seperate header from logo. Padding left for space between nav container and links. Removed default ul styles.
+        ul {
             display: flex;
-            flex-direction: row;
-            border-top: 3px solid white;
-            padding-top: 10px;
+            flex-direction: column;
+            list-style-type: none;
+            color: white;
+            padding-top: 25px;
+            padding-left: 17px;
+            margin: 0;
         }
-        //Adds padding to icons and controls the size. 
+        //Anchor tag styled so navigation links look correct. 
         a {
-            padding-right: 25px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
             padding-bottom: 30px;
-            i {
-                font-size: 32px;
+            font-size: 1.3em;
+        }
+        //Styles added to the link on hover. 
+        a:hover {
+            text-decoration: underline;
+            text-decoration-color: orangered;
+        }
+        //Box created that contains the social media icons. Also positions the icons. 
+        .social-media-links {
+            display: flex;
+            justify-content: flex-end;
+            flex: 1;
+            flex-direction: column;
+            padding-left: 10px;
+            //        border-top: 3px solid white;
+            //Box that applies the colours and space around the element in the box. 
+            .social {
+                display: flex;
+                flex-direction: row;
+                border-top: 3px solid white;
+                padding-top: 10px;
+            }
+            //Adds padding to icons and controls the size. 
+            a {
+                padding-right: 25px;
+                padding-bottom: 30px;
+                i {
+                    font-size: 32px;
+                }
             }
         }
     }
-}
-
-//Logo container is container around the logo. Adds space around the element and affects the position of the logo.
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin: auto;
-    font-family: 'Tangerine';
-    //Controls the size of the logo font and position within the circle. 
-    p {
-        font-size: 90px;
-        color: white;
-        padding-left: 10px;
-        font-family: 'Tangerine';
-    }
-    a {
-        text-decoration: none;
-    }
-    //Logo circle and font change colour when they hover over it. 
-    a:hover {
-        text-decoration: none;
-        p {
-            color: orangered;
-        }
-        div {
-            border-color: orangered;
-        }
-    }
-}
-
-//The circle of the logo. Centers the elements inside of the container.
-.logo {
-    display: flex;
-    border: 6px solid white;
-    border-radius: 50%;
-    height: 190px;
-    width: 190px;
-    align-items: center;
-    font-family: 'Tangerine';
-}
-
-//Banner container. Applied the universe background. 
-.banner-container {
-    display: flex;
-    flex-direction: column;
-    background-image: url("../img/stars-67616.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    color: white;
-    //Text that is on the banner. 
-    .banner-text {
+    
+    //Logo container is container around the logo. Adds space around the element and affects the position of the logo.
+    .logo-container {
         display: flex;
         flex-direction: column;
-        text-align: center;
-        margin-top: auto;
-        margin-bottom: auto;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin: auto;
+        font-family: 'Tangerine';
+        //Controls the size of the logo font and position within the circle. 
+        p {
+            font-size: 90px;
+            color: white;
+            padding-left: 10px;
+            font-family: 'Tangerine';
+        }
+        a {
+            text-decoration: none;
+        }
+        //Logo circle and font change colour when they hover over it. 
+        a:hover {
+            text-decoration: none;
+            p {
+                color: orangered;
+            }
+            div {
+                border-color: orangered;
+            }
+        }
     }
+    
+    //The circle of the logo. Centers the elements inside of the container.
+    .logo {
+        display: flex;
+        border: 6px solid white;
+        border-radius: 50%;
+        height: 190px;
+        width: 190px;
+        align-items: center;
+        font-family: 'Tangerine';
+    }
+    
+    //Banner container. Applied the universe background. 
+    .banner-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url("../img/stars-67616.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        color: white;
+        //Text that is on the banner. 
+        .banner-text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .scroll-bottom {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            padding-bottom: 5vh;
+            img {
+                width: 45px;
+            }
+        }
+        //Size and padding on the text.
+        h2 {
+            padding-top: 15px;
+            font-size: 35px;
+        }
+        h1 {
+            padding-top: 15px;
+            font-size: 100px;
+        }
+        h3 {
+            padding-top: 15px;
+            font-size: 20px;
+        }
+    }
+    
+    .menu-position {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    
+    .menu-btn {
+        width: fit-content;
+        height: 90px;
+        color: white;
+        padding: 5px 14px;
+        line-height: 1.5;
+        margin-left: 20px;
+        background-color: #151a1e;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // Burger Container
+        .burger-container {
+            position: relative;
+            width: 100%;
+            margin: auto 0;
+            // border: 2px solid green; 
+            // Burger Lines
+            .menu-burger {
+                display: block;
+                position: relative;
+                width: 60px;
+                height: 5px;
+                background-color: white;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 60px;
+                    height: 5px;
+                    background-color: white;
+                }
+                // Moves other 2 bars in correct position
+                &::before {
+                    content: "";
+                    transform: translateY(-8px);
+                }
+                &::after {
+                    content: "";
+                    transform: translateY(8px);
+                }
+            }
+        }
+        // Menu Title
+        .menu-title {
+            font-size: 2rem; //12px
+        }
+    }
+    
     .scroll-bottom {
         display: flex;
         flex-direction: column;
-        align-self: center;
+        align-items: center;
         padding-bottom: 5vh;
-        img {
+        padding-top: 5vh;
+        .up {
             width: 45px;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
         }
     }
-    //Size and padding on the text.
-    h2 {
-        padding-top: 15px;
-        font-size: 35px;
+    
+    //Allowing the nav to appear at the correct size and making the main element the correct size. 
+    @media screen and (min-width: $large) {
+        main {
+            margin-left: 250px;
+            width: calc(100vw - 250px);
+        }
+        .main-nav {
+            display: flex;
+        }
+        .menu-position {
+            display: none;
+        }
     }
-    h1 {
-        padding-top: 15px;
-        font-size: 100px;
-    }
-    h3 {
-        padding-top: 15px;
-        font-size: 20px;
-    }
-}
-
-.menu-position {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    padding-right: 20px;
-    padding-top: 20px;
-}
-
-.menu-btn {
-    width: fit-content;
-    height: 63px;
-    color: white;
-    padding: 5px 14px;
-    line-height: 1.5;
-    margin-left: 20px;
-    background-color: #151a1e;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // Burger Container
-    .burger-container {
-        position: relative;
-        width: 100%;
-        margin: auto 0;
-        // border: 2px solid green; 
-        // Burger Lines
-        .menu-burger {
-            display: block;
-            position: relative;
-            width: 33px;
-            height: 3px;
-            background-color: white;
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
+    
+    @media screen and (min-width: $medium) {
+        .menu-btn {
+            .menu-burger {
                 width: 33px;
                 height: 3px;
-                background-color: white;
-            }
-            // Moves other 2 bars in correct position
-            &::before {
-                content: "";
-                transform: translateY(-8px);
-            }
-            &::after {
-                content: "";
-                transform: translateY(8px);
+                &::before,
+                &::after {
+                    width: 33px;
+                    height: 3px;
+                }
             }
         }
     }
-    // Menu Title
-    .menu-title {
-        font-size: 0.75rem; //12px
-    }
-}
-
-.scroll-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5vh;
-    padding-top: 5vh;
-    .up {
-        width: 45px;
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-}
-
-//Allowing the nav to appear at the correct size and making the main element the correct size. 
-@media screen and (min-width: $large) {
-    main {
-        margin-left: 250px;
-        width: calc(100vw - 250px);
-    }
-    .main-nav {
-        display: flex;
-    }
-    .menu-position {
-        display: none;
-    }
-}

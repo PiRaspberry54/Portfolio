@@ -12,6 +12,7 @@
         margin-left: auto;
     }
 }
+
 @media screen and (min-width: $large) {
     .inner-container {
         width: 750px;
@@ -19,6 +20,7 @@
         margin-left: auto;
     }
 }
+
 @media screen and (min-width: $extra-large) {
     .inner-container {
         width: 950px;
@@ -44,6 +46,7 @@
         margin-left: auto;
     }
 }
+
 @media screen and (min-width: $large) {
     .inner-container-two {
         width: 750px;
@@ -51,6 +54,7 @@
         margin-left: auto;
     }
 }
+
 @media screen and (min-width: $extra-large) {
     .inner-container-two {
         width: 950px;
