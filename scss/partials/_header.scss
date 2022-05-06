@@ -167,8 +167,8 @@
     }
     
     .menu-btn {
-        width: fit-content;
-        height: 90px;
+        width: 63px;
+        height: 53px;
         color: white;
         padding: 5px 14px;
         line-height: 1.5;
@@ -189,32 +189,28 @@
             .menu-burger {
                 display: block;
                 position: relative;
-                width: 60px;
-                height: 5px;
+                width: 40px;
+                height: 6px;
                 background-color: white;
                 &::before,
                 &::after {
                     content: "";
                     position: absolute;
                     left: 0;
-                    width: 60px;
-                    height: 5px;
+                    width: 40px;
+                    height: 6px;
                     background-color: white;
                 }
                 // Moves other 2 bars in correct position
                 &::before {
                     content: "";
-                    transform: translateY(-8px);
+                    transform: translateY(-15px);
                 }
                 &::after {
                     content: "";
-                    transform: translateY(8px);
+                    transform: translateY(15px);
                 }
             }
-        }
-        // Menu Title
-        .menu-title {
-            font-size: 2rem; //12px
         }
     }
     

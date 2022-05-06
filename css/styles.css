@@ -222,8 +222,8 @@ html {
 }
 
 .menu-btn {
-  width: fit-content;
-  height: 90px;
+  width: 63px;
+  height: 53px;
   color: white;
   padding: 5px 14px;
   line-height: 1.5;
@@ -243,28 +243,25 @@ html {
 .menu-btn .burger-container .menu-burger {
   display: block;
   position: relative;
-  width: 60px;
-  height: 5px;
+  width: 40px;
+  height: 6px;
   background-color: white;
 }
 .menu-btn .burger-container .menu-burger::before, .menu-btn .burger-container .menu-burger::after {
   content: "";
   position: absolute;
   left: 0;
-  width: 60px;
-  height: 5px;
+  width: 40px;
+  height: 6px;
   background-color: white;
 }
 .menu-btn .burger-container .menu-burger::before {
   content: "";
-  transform: translateY(-8px);
+  transform: translateY(-15px);
 }
 .menu-btn .burger-container .menu-burger::after {
   content: "";
-  transform: translateY(8px);
-}
-.menu-btn .menu-title {
-  font-size: 2rem;
+  transform: translateY(15px);
 }
 
 .scroll-bottom {
