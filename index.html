@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Jasmine's Portfolio</title>
@@ -83,7 +84,7 @@
                 </div>
             </div>
             <div class="scroll-bottom">
-                <a href="index.html#contact-section">
+                <a href="index.html#project-section">
                     <img src="img/down-white-arrow-chevron-label-text-triangle-symbol-transparent-png-1040505.png">
                 </a>
             </div>
@@ -93,19 +94,19 @@
             <div class="cards">
                 <div class="row">
                     <div class="card1">
-                        <p>First Website</p>
-                        <a href="https://github.com/PiRaspberry54/FirstEverWebsite" target="_blank">
-                            <p>Find out More</p>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="card-content">
+                            <h2 class="card-title">Replica Netmatters Site</h2>
+                            <p class="card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, amet rem aspernatur similique asperiores cupiditate incidunt repellendus laborum aliquid sapiente iste excepturi ipsam beatae placeat commodi doloremque, ea blanditiis? Vero.
+                            </p>
+                            <a class="a-button" target="_blank" href="https://netmatters.jasmine-howes.netmatters-scs.co.uk/">
+                                <div class="card-button">
+                                    <p>VIEW PROJECT</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="card2">
-                        <p>Current Project</p>
-                        <a href="https://github.com/PiRaspberry54/HTMLandCSSReview" target="_blank">
-                            <p>Find out More</p>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                    <div class="card2"></div>
                     <div class="card3"></div>
                     <div class="card4"></div>
                     <div class="card5"></div>
@@ -128,7 +129,7 @@
                             <div class="name">
                                 <div class="form-element1">
                                     <!--                      <label for="first">Firstname:</label>-->
-                                    <input type="name" placeholder="Enter Firstname" name="first" id="firstname">
+                                    <input type="name" placeholder="Enter Firstname *" name="first" id="firstname">
                                     <div class="validation-container" id="firstname-required-text" style="display: none;">
                                         <h3><strong>This is a required field *</strong></h3>
                                     </div>
@@ -136,7 +137,7 @@
 
                                 <div class="form-element2">
                                     <!--                      <label for="last">Surname:</label>-->
-                                    <input type="name" placeholder="Enter Surname" name="last" id="surname">
+                                    <input type="name" placeholder="Enter Surname *" name="last" id="surname">
                                     <div class="validation-container" id="surname-required-text" style="display: none;">
                                         <h3><strong>This is a required field *</strong></h3>
                                     </div>
@@ -144,7 +145,7 @@
                             </div>
                             <div class="form-element">
                                 <!--                      <label for="email">Email:</label>-->
-                                <input type="email" placeholder="Enter Email" name="email" id="email">
+                                <input type="email" placeholder="Enter Email *" name="email" id="email">
                             </div>
 
                             <div class="validation-container" id="email-required-text" style="display: none;">
@@ -158,7 +159,7 @@
 
                             <div class="form-element">
                                 <!--                      <label for="email">Phone Number:</label>-->
-                                <input type="phone" placeholder="Enter Phone Number" name="phone" id="phone">
+                                <input type="phone" placeholder="Enter Phone Number *" name="phone" id="phone">
                             </div>
 
                             <div class="validation-container" id="phone-required-text" style="display: none;">
@@ -172,7 +173,7 @@
 
                             <div class="form-element">
                                 <!--                      <label for="tele">Mobile Phone Number:</label>-->
-                                <input type="subject" placeholder="Enter Subject" name="subject" id="subject">
+                                <input type="subject" placeholder="Enter Subject *" name="subject" id="subject">
                             </div>
 
                             <div class="validation-container" id="subject-required-text" style="display: none;">
@@ -180,7 +181,7 @@
                             </div>
 
                             <div class="form-element">
-                                <textarea id="message" placeholder="Message"></textarea>
+                                <textarea id="message" placeholder="Message *"></textarea>
                             </div>
 
                             <div class="validation-container" id="message-required-text" style="display: none;">
@@ -189,7 +190,7 @@
 
                             <a href="#form-element">
                                 <div class="button">
-                                    <p>Submit</p>
+                                    <p>SUBMIT</p>
                                 </div>
                             </a>
                         </form>

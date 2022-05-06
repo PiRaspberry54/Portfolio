@@ -1,7 +1,9 @@
 .scs-content {
     display: flex;
     flex-wrap: wrap;
-    .scion-scheme, .netmatters, .treehouse {
+    .scion-scheme,
+    .netmatters,
+    .treehouse {
         display: flex;
         height: 350px;
         flex-direction: column;
@@ -53,36 +55,40 @@
         justify-content: space-between;
     }
     ul {
-        margin: 0; 
+        margin: 0;
         list-style-type: none;
+        padding: 0;
         li {
             text-indent: -5px;
             padding-bottom: 5px;
         }
-        &> li:before {
+        &>li:before {
             content: "-";
             text-indent: -5px;
         }
     }
-//    .badges-position {
-//        display: flex;
-//        flex-direction: column;
-//        align-self: flex-end;
-//    }
+    //    .badges-position {
+    //        display: flex;
+    //        flex-direction: column;
+    //        align-self: flex-end;
+    //    }
     .badges-container {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-self: flex-end;
         margin-bottom: 15px;
-        .badge1, .badge2, .badge3, .badge4, .badge5{
+        .badge1,
+        .badge2,
+        .badge3,
+        .badge4,
+        .badge5 {
             display: flex;
             img {
-              height: 100px;
-
+                height: 100px;
             }
         }
-   }
+    }
 }
 
 .two {
@@ -100,6 +106,5 @@
         .netmatters {
             margin-left: 10px;
         }
-
     }
 }

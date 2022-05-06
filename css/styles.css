@@ -79,6 +79,10 @@ img {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-nav {
   display: none;
   position: fixed;
@@ -307,6 +311,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
 }
 .typing-container .input-cursor {
   display: inline-block;
@@ -332,6 +337,12 @@ img {
 }
 .input-cursor {
   animation: blink 0.6s linear infinite alternate;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 main {
@@ -453,7 +464,7 @@ main {
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  height: 70%;
+  height: 75vh;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -492,8 +503,8 @@ main {
   justify-content: space-between;
 }
 .about-content p {
-  font-size: 1.2rem;
-  line-height: 1.3;
+  font-size: 1.5rem;
+  line-height: 1.5;
   text-align: center;
   padding-top: 5%;
   padding-right: 5px;
@@ -565,6 +576,16 @@ main {
   font-size: 45px;
 }
 
+.about-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
 .code-content {
   font-weight: bold;
   display: flex;
@@ -603,7 +624,9 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
-.scs-content .scion-scheme, .scs-content .netmatters, .scs-content .treehouse {
+.scs-content .scion-scheme,
+.scs-content .netmatters,
+.scs-content .treehouse {
   display: flex;
   height: 350px;
   flex-direction: column;
@@ -617,15 +640,21 @@ main {
   margin-top: 20px;
   width: 100%;
 }
-.scs-content .scion-scheme h1, .scs-content .netmatters h1, .scs-content .treehouse h1 {
+.scs-content .scion-scheme h1,
+.scs-content .netmatters h1,
+.scs-content .treehouse h1 {
   font-size: 35px;
   padding-top: 10px;
   padding-bottom: 20px;
 }
-.scs-content .scion-scheme p, .scs-content .netmatters p, .scs-content .treehouse p {
+.scs-content .scion-scheme p,
+.scs-content .netmatters p,
+.scs-content .treehouse p {
   line-height: 1.4rem;
 }
-.scs-content .scion-scheme a, .scs-content .netmatters a, .scs-content .treehouse a {
+.scs-content .scion-scheme a,
+.scs-content .netmatters a,
+.scs-content .treehouse a {
   display: flex;
   text-decoration: none;
   align-self: center;
@@ -633,14 +662,20 @@ main {
   padding-bottom: 2px;
   padding-top: 3px;
 }
-.scs-content .scion-scheme a:hover, .scs-content .netmatters a:hover, .scs-content .treehouse a:hover {
+.scs-content .scion-scheme a:hover,
+.scs-content .netmatters a:hover,
+.scs-content .treehouse a:hover {
   color: orangered;
 }
-.scs-content .scion-scheme a p, .scs-content .netmatters a p, .scs-content .treehouse a p {
+.scs-content .scion-scheme a p,
+.scs-content .netmatters a p,
+.scs-content .treehouse a p {
   font-size: 0.9rem;
   padding-right: 3px;
 }
-.scs-content .scion-scheme a i, .scs-content .netmatters a i, .scs-content .treehouse a i {
+.scs-content .scion-scheme a i,
+.scs-content .netmatters a i,
+.scs-content .treehouse a i {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -657,6 +692,7 @@ main {
 .scs-content ul {
   margin: 0;
   list-style-type: none;
+  padding: 0;
 }
 .scs-content ul li {
   text-indent: -5px;
@@ -673,10 +709,18 @@ main {
   align-self: flex-end;
   margin-bottom: 15px;
 }
-.scs-content .badges-container .badge1, .scs-content .badges-container .badge2, .scs-content .badges-container .badge3, .scs-content .badges-container .badge4, .scs-content .badges-container .badge5 {
+.scs-content .badges-container .badge1,
+.scs-content .badges-container .badge2,
+.scs-content .badges-container .badge3,
+.scs-content .badges-container .badge4,
+.scs-content .badges-container .badge5 {
   display: flex;
 }
-.scs-content .badges-container .badge1 img, .scs-content .badges-container .badge2 img, .scs-content .badges-container .badge3 img, .scs-content .badges-container .badge4 img, .scs-content .badges-container .badge5 img {
+.scs-content .badges-container .badge1 img,
+.scs-content .badges-container .badge2 img,
+.scs-content .badges-container .badge3 img,
+.scs-content .badges-container .badge4 img,
+.scs-content .badges-container .badge5 img {
   height: 100px;
 }
 
@@ -720,10 +764,11 @@ main {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  color: whitesmoke;
   height: 315px;
   margin-bottom: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
   border-bottom: 3px solid white;
   border-left: 3px solid white;
   border-right: 3px solid white;
@@ -733,6 +778,7 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
 }
 .cards .card1:hover,
 .cards .card2:hover,
@@ -742,81 +788,12 @@ main {
 .cards .card6:hover {
   border-bottom: 3px solid orangered;
 }
-.cards .card1 p,
-.cards .card2 p,
-.cards .card3 p,
-.cards .card4 p,
-.cards .card5 p,
-.cards .card6 p {
-  font-size: 1.4rem;
-}
-.cards .card1 a,
-.cards .card2 a,
-.cards .card3 a,
-.cards .card4 a,
-.cards .card5 a,
-.cards .card6 a {
-  display: flex;
-  text-decoration: none;
-  padding-bottom: 2px;
-  padding-top: 3px;
-}
-.cards .card1 a:hover,
-.cards .card2 a:hover,
-.cards .card3 a:hover,
-.cards .card4 a:hover,
-.cards .card5 a:hover,
-.cards .card6 a:hover {
-  text-decoration: underline;
-}
-.cards .card1 a p,
-.cards .card2 a p,
-.cards .card3 a p,
-.cards .card4 a p,
-.cards .card5 a p,
-.cards .card6 a p {
-  font-size: 0.9rem;
-  padding-right: 3px;
-}
-.cards .card1 a i,
-.cards .card2 a i,
-.cards .card3 a i,
-.cards .card4 a i,
-.cards .card5 a i,
-.cards .card6 a i {
-  margin-top: auto;
-  margin-bottom: auto;
-}
 
 .card1 {
-  background-image: url("../img/website1.png");
-}
-.card1 a {
-  color: black;
-}
-.card1 a p {
-  color: black;
-}
-.card1 a i {
-  color: black;
-}
-
-.card2 {
   background-image: url("../img/netmatters.png");
 }
-.card2 p {
-  color: white;
-}
-.card2 a {
-  color: white;
-}
-.card2 a p {
-  color: white;
-}
-.card2 a i {
-  color: white;
-}
 
+.card2,
 .card3,
 .card4,
 .card5,
@@ -854,6 +831,91 @@ main {
     flex-basis: 25%;
   }
 }
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(rgba(32, 42, 68, 0.75), rgba(0, 0, 0, 0.75));
+  transform: translateY(72%);
+}
+.card-content .card-title {
+  position: relative;
+  width: max-content;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.card-content .card-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: calc(100% + 1.5rem);
+  left: -1.5rem;
+  bottom: 0;
+  background-color: orangered;
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+.card-content .card-body {
+  padding-top: 10px;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+@media (hover) {
+  .card-content {
+    transition: transform 500ms ease;
+    transition-delay: 500ms;
+  }
+
+  .card1 {
+    transition: transform 500ms ease;
+  }
+
+  .card1:hover {
+    transform: scale(1.05);
+  }
+
+  .card1:hover .card-content {
+    transform: translateY(0);
+  }
+
+  .card1-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .card1:hover .card1-content > * {
+    opacity: 1;
+  }
+
+  .card1:hover .card-title::after {
+    transform: scaleX(1);
+  }
+
+  .card-title::after {
+    transform: scaleX(0);
+  }
+}
+.a-button {
+  text-decoration: none;
+  width: 125px;
+}
+.a-button .card-button {
+  display: flex;
+  width: 125px;
+  padding: 5px 0px;
+  justify-content: center;
+  color: white;
+  background-color: orangered;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.a-button:hover .card-button, .a-button:focus .card-button {
+  background-color: white;
+  color: orangered;
+  text-decoration: underline;
+}
+
 .contact-container {
   display: flex;
   flex-wrap: wrap;
