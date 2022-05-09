@@ -24,15 +24,16 @@ main {
         background-position: center center;
         background-size: contain;
         background-color: white;
-        height: 25vh;
+        height: 30vh;
         width: 100%;
         color: white;
         h1 {
             text-align: left;
+            padding-left: 2vw;
             font-size: 100px;
             margin-top: auto;
             margin-bottom: auto;
-            text-align: center;
+            // text-align: center;
             font-family: 'Tangerine';
         }
     }
@@ -41,12 +42,10 @@ main {
         color: #202A44;
     }
     .code {
-        background-image: url("../img/code.jpg");
+        background-image: url("../../img/CodingExamples2.jpeg");
         background-size: cover;
-    }
-    .scs {
-        background-image: url("../img/learning.jpeg");
-        background-color: #0054af;
+        // color: #7969ad;
+        // color: orangered;
     }
 }
 
@@ -75,15 +74,16 @@ main {
         background-position: center center;
         background-size: contain;
         background-color: white;
-        height: 25vh;
+        height: 30vh;
         width: 100%;
         color: white;
         h1 {
             text-align: left;
+            padding-left: 2vw;
             font-size: 120px;
             margin-top: auto;
             margin-bottom: auto;
-            text-align: center;
+            // text-align: center;
             font-family: 'Tangerine';
         }
     }

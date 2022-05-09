@@ -360,16 +360,16 @@ main {
   background-position: center center;
   background-size: contain;
   background-color: white;
-  height: 25vh;
+  height: 30vh;
   width: 100%;
   color: white;
 }
 .main-content .small-banner h1 {
   text-align: left;
+  padding-left: 2vw;
   font-size: 100px;
   margin-top: auto;
   margin-bottom: auto;
-  text-align: center;
   font-family: "Tangerine";
 }
 .main-content .about {
@@ -377,12 +377,8 @@ main {
   color: #202A44;
 }
 .main-content .code {
-  background-image: url("../img/code.jpg");
+  background-image: url("../../img/CodingExamples2.jpeg");
   background-size: cover;
-}
-.main-content .scs {
-  background-image: url("../img/learning.jpeg");
-  background-color: #0054af;
 }
 
 .main-content-two {
@@ -411,16 +407,16 @@ main {
   background-position: center center;
   background-size: contain;
   background-color: white;
-  height: 25vh;
+  height: 30vh;
   width: 100%;
   color: white;
 }
 .scs-style .small-banner h1 {
   text-align: left;
+  padding-left: 2vw;
   font-size: 120px;
   margin-top: auto;
   margin-bottom: auto;
-  text-align: center;
   font-family: "Tangerine";
 }
 .scs-style .scs {
