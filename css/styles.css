@@ -54,10 +54,9 @@
 }
 
 .wrapper ul {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   list-style: none;
   text-align: center;
 }
@@ -100,6 +99,20 @@
 
 input {
   display: none;
+}
+
+.nav-line {
+  content: "";
+  align-self: center;
+  width: 85%;
+  height: 3px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  background-color: white;
 }
 
 * {
