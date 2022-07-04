@@ -1,3 +1,7 @@
+.hide-nav {
+    display: flex;
+}
+
 .wrapper {
     position: fixed;
     top: 0;
@@ -140,5 +144,11 @@
     p {
         color: #151a1e;
         ;
+    }
+}
+
+@media screen and (min-width: $large) {
+    .hide-nav {
+        display: none;
     }
 }
