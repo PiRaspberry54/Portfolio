@@ -97,7 +97,7 @@
   color: #fcc203;
 }
 
-input {
+.nav-input {
   display: none;
 }
 
@@ -113,6 +113,33 @@ input {
   margin-bottom: 15px;
   color: white;
   background-color: white;
+}
+
+.social-media-links-small {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+}
+.social-media-links-small a {
+  color: white;
+  font-size: 32px;
+  padding-right: 20px;
+}
+.social-media-links-small a i {
+  font-size: 32px;
+}
+.social-media-links-small a:hover {
+  color: #151a1e;
+}
+
+.wrapper .logo:hover {
+  border-color: #151a1e;
+}
+.wrapper .logo:hover p {
+  color: #151a1e;
 }
 
 * {
@@ -366,7 +393,7 @@ main {
   color: #202A44;
 }
 .main-content .code {
-  background-image: url("../../img/CodingExamples2.jpeg");
+  background-image: url("../../img/michael-dziedzic-aQYgUYwnCsM-unsplash.jpg");
   background-size: cover;
 }
 

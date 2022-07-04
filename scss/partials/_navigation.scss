@@ -97,7 +97,7 @@
     color: #fcc203;
 }
 
-input {
+.nav-input {
     display: none;
 }
 
@@ -113,4 +113,32 @@ input {
     margin-bottom: 15px;
     color: white;
     background-color: white;
+}
+
+.social-media-links-small {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    a {
+        color: white;
+        font-size: 32px;
+        padding-right: 20px;
+        i {
+            font-size: 32px;
+        }
+        &:hover {
+            color: #151a1e;
+        }
+    }
+}
+
+.wrapper .logo:hover {
+    border-color: #151a1e;
+    p {
+        color: #151a1e;
+        ;
+    }
 }
