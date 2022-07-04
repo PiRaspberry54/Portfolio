@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Jasmine's Portfolio</title>
+    <meta name="description" content="Come explore my portfolio site where your find links to projects and be able to find out more about my skils. A trainee web developer.">
+    <meta name="keywords" content="Web developer, Portfolio, HTMl, CSS, Javascript, SASS">
+    <meta name="author" content="Jasmine Howes">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +18,7 @@
 </head>
 
 <body class="main-container">
-    <nav class="main-nav">
+    <!-- <nav class="main-nav" id="sidebar">
         <div class="logo-container">
             <a href="index.html">
                 <div class="logo">
@@ -38,172 +41,186 @@
                     <i class="fab fa-linkedin-in"></i></a></span>
             </div>
         </div>
-    </nav>
-
-    <nav class="top-nav">
-        <div class="logo-container">
-            <a href="index.html">
-                <div class="logo">
-                    <p>JH</p>
-                </div>
-            </a>
-        </div>
-        <ul>
-            <li><a href="about.html">About me</a></li>
-            <li><a href="index.html#project-section">My Portfolio</a></li>
-            <li><a href="coding-examples.html">Coding Examples</a></li>
-            <li><a href="scs.html">SCS Scheme</a></li>
-            <li><a href="index.html#contact-section">Contact Me</a></li>
+    </nav> -->
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+        <h1>JH</h1>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Feedback</a></li>
         </ul>
-        <div class="exit-position">
-            <div class="exit-button">
-                <div class="x-container">
-                    <img src="img/pngfind.com-x-png-1320307.png" height="30px">
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <div id="top" class="banner-container">
-            <div class="menu-position">
-                <div class="menu-btn">
-                    <div class="burger-container">
-                        <!-- burger lines -->
-                        <span class="menu-burger"></span>
+    </div>
+    <div class="main-site">
+        <nav class="main-nav">
+            <div class="logo-container">
+                <a href="index.html">
+                    <div class="logo">
+                        <p>JH</p>
                     </div>
-                </div>
-            </div>
-            <div class="banner-text">
-                <h2>Hi My Name is,</h2>
-                <h1>Jasmine</h1>
-                <div class="typing-container">
-                    <h3 id="text"></h3>
-                    <span class="input-cursor"></span>
-                </div>
-            </div>
-            <div class="scroll-bottom">
-                <a href="index.html#project-section">
-                    <img src="img/down-white-arrow-chevron-label-text-triangle-symbol-transparent-png-1040505.png">
                 </a>
             </div>
-        </div>
-        <div class="main-content-two">
-            <h1 id="project-section" class="projects">Projects</h1>
-            <div class="cards">
-                <div class="row">
-                    <div class="card1">
-                        <div class="card-content">
-                            <h2 class="card-title">Replica Netmatters Site</h2>
-                            <p class="card-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, amet rem aspernatur similique asperiores cupiditate incidunt repellendus laborum aliquid sapiente iste excepturi ipsam beatae placeat commodi doloremque, ea blanditiis? Vero.
-                            </p>
-                            <a class="a-button" target="_blank" href="https://netmatters.jasmine-howes.netmatters-scs.co.uk/">
-                                <div class="card-button">
-                                    <p>VIEW PROJECT</p>
-                                </div>
-                            </a>
+            <ul>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="index.html#project-section">My Portfolio</a></li>
+                <li><a href="coding-examples.html">Coding Examples</a></li>
+                <li><a href="scs.html">SCS Scheme</a></li>
+                <li><a href="index.html#contact-section">Contact Me</a></li>
+            </ul>
+            <div class="social-media-links">
+                <div class="social">
+                    <span><a href="https://github.com/piraspberry54" target="_blank">
+                        <i class="fab fa-github"></i></a></span>
+                    <span><a href="https://www.linkedin.com/in/jasmine-howes-91b049193/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i></a></span>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div id="top" class="banner-container">
+                <!-- <div class="menu-position">
+                    <div class="menu-btn">
+                        <div class="burger-container">
+                            burger line
+                            <span class="menu-burger"></span>
                         </div>
                     </div>
-                    <div class="card2"></div>
-                    <div class="card3"></div>
-                    <div class="card4"></div>
-                    <div class="card5"></div>
-                    <div class="card6"></div>
+                </div> -->
+                <div class="banner-text">
+                    <h2>Hi My Name is,</h2>
+                    <h1>Jasmine</h1>
+                    <div class="typing-container">
+                        <h3 id="text"></h3>
+                        <span class="input-cursor"></span>
+                    </div>
+                </div>
+                <div class="scroll-bottom">
+                    <a href="index.html#project-section">
+                        <img src="img/down-white-arrow-chevron-label-text-triangle-symbol-transparent-png-1040505.png">
+                    </a>
                 </div>
             </div>
-            <div id="contact-section" class="contact-container">
-                <div class="completedForm" id="completedForm" style="display: none;">
-                    <h1>Thank you for getting in contact. We will reply within 24 hours.</h1>
-                </div>
-                <div class="inner-container contact">
-                    <div class="touch">
-                        <h1>GET IN TOUCH</h1>
-                        <p>If you want to get in touch with me. Here is how you can do it...</p>
-                        <p class="email-p"><a href="mailto:jasmine.howes@netmatters-scs.com" target="_blank">JASMINE.HOWES@NETMATTERS-SCS.COM</a></p>
-                        <P>Or you can contact me using the form provided. I look forward to hearing from you!</P>
+            <div class="main-content-two">
+                <h1 id="project-section" class="projects">Projects</h1>
+                <div class="cards">
+                    <div class="row">
+                        <div class="card1">
+                            <div class="card-content">
+                                <h2 class="card-title">Replica Netmatters Site</h2>
+                                <p class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, amet rem aspernatur similique asperiores cupiditate incidunt repellendus laborum aliquid sapiente iste excepturi ipsam beatae placeat commodi doloremque, ea blanditiis? Vero.
+                                </p>
+                                <a class="a-button" target="_blank" href="https://netmatters.jasmine-howes.netmatters-scs.co.uk/">
+                                    <div class="card-button">
+                                        <p>VIEW PROJECT</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card2"></div>
+                        <div class="card3"></div>
+                        <div class="card4"></div>
+                        <div class="card5"></div>
+                        <div class="card6"></div>
                     </div>
-                    <div class="form-container">
-                        <form action="#">
-                            <div class="name">
-                                <div class="form-element1">
-                                    <!--                      <label for="first">Firstname:</label>-->
-                                    <input type="name" placeholder="Enter Firstname *" name="first" id="firstname">
-                                    <div class="validation-container" id="firstname-required-text" style="display: none;">
-                                        <h3><strong>This is a required field *</strong></h3>
+                </div>
+                <div id="contact-section" class="contact-container">
+                    <div class="completedForm" id="completedForm" style="display: none;">
+                        <h1>Thank you for getting in contact. We will reply within 24 hours.</h1>
+                    </div>
+                    <div class="inner-container contact">
+                        <div class="touch">
+                            <h1>GET IN TOUCH</h1>
+                            <p>If you want to get in touch with me. Here is how you can do it...</p>
+                            <p class="email-p"><a href="mailto:jasmine.howes@netmatters-scs.com" target="_blank">JASMINE.HOWES@NETMATTERS-SCS.COM</a></p>
+                            <P>Or you can contact me using the form provided. I look forward to hearing from you!</P>
+                        </div>
+                        <div class="form-container">
+                            <form action="#">
+                                <div class="name">
+                                    <div class="form-element1">
+                                        <!--                      <label for="first">Firstname:</label>-->
+                                        <input type="name" placeholder="Enter Firstname *" name="first" id="firstname">
+                                        <div class="validation-container" id="firstname-required-text" style="display: none;">
+                                            <h3><strong>This is a required field *</strong></h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-element2">
+                                        <!--                      <label for="last">Surname:</label>-->
+                                        <input type="name" placeholder="Enter Surname *" name="last" id="surname">
+                                        <div class="validation-container" id="surname-required-text" style="display: none;">
+                                            <h3><strong>This is a required field *</strong></h3>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="form-element">
+                                    <!--                      <label for="email">Email:</label>-->
+                                    <input type="email" placeholder="Enter Email *" name="email" id="email">
+                                </div>
 
-                                <div class="form-element2">
-                                    <!--                      <label for="last">Surname:</label>-->
-                                    <input type="name" placeholder="Enter Surname *" name="last" id="surname">
-                                    <div class="validation-container" id="surname-required-text" style="display: none;">
-                                        <h3><strong>This is a required field *</strong></h3>
+                                <div class="validation-container" id="email-required-text" style="display: none;">
+                                    <h3><strong>This is a required field *</strong></h3>
+                                    <!-- <h3><strong>This isn't a valid email.</strong></h3> -->
+                                </div>
+
+                                <div class="validation-container" id="email-valid-text" style="display: none;">
+                                    <h3><strong>This isn't a valid email.</strong></h3>
+                                </div>
+
+                                <div class="form-element">
+                                    <!--                      <label for="email">Phone Number:</label>-->
+                                    <input type="phone" placeholder="Enter Phone Number *" name="phone" id="phone">
+                                </div>
+
+                                <div class="validation-container" id="phone-required-text" style="display: none;">
+                                    <h3><strong>This is a required field *</strong></h3>
+                                    <!-- <h3><strong>This is not a valid phone number.</strong></h3> -->
+                                </div>
+
+                                <div class="validation-container" id="phone-valid-text" style="display: none;">
+                                    <h3><strong>This isn't a valid phone number.</strong></h3>
+                                </div>
+
+                                <div class="form-element">
+                                    <!--                      <label for="tele">Mobile Phone Number:</label>-->
+                                    <input type="subject" placeholder="Enter Subject *" name="subject" id="subject">
+                                </div>
+
+                                <div class="validation-container" id="subject-required-text" style="display: none;">
+                                    <h3><strong>This is a required field *</strong></h3>
+                                </div>
+
+                                <div class="form-element">
+                                    <textarea id="message" placeholder="Message *"></textarea>
+                                </div>
+
+                                <div class="validation-container" id="message-required-text" style="display: none;">
+                                    <h3><strong>This is a required field *</strong></h3>
+                                </div>
+
+                                <a href="#form-element">
+                                    <div class="button">
+                                        <p>SUBMIT</p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-element">
-                                <!--                      <label for="email">Email:</label>-->
-                                <input type="email" placeholder="Enter Email *" name="email" id="email">
-                            </div>
-
-                            <div class="validation-container" id="email-required-text" style="display: none;">
-                                <h3><strong>This is a required field *</strong></h3>
-                                <!-- <h3><strong>This isn't a valid email.</strong></h3> -->
-                            </div>
-
-                            <div class="validation-container" id="email-valid-text" style="display: none;">
-                                <h3><strong>This isn't a valid email.</strong></h3>
-                            </div>
-
-                            <div class="form-element">
-                                <!--                      <label for="email">Phone Number:</label>-->
-                                <input type="phone" placeholder="Enter Phone Number *" name="phone" id="phone">
-                            </div>
-
-                            <div class="validation-container" id="phone-required-text" style="display: none;">
-                                <h3><strong>This is a required field *</strong></h3>
-                                <!-- <h3><strong>This is not a valid phone number.</strong></h3> -->
-                            </div>
-
-                            <div class="validation-container" id="phone-valid-text" style="display: none;">
-                                <h3><strong>This isn't a valid phone number.</strong></h3>
-                            </div>
-
-                            <div class="form-element">
-                                <!--                      <label for="tele">Mobile Phone Number:</label>-->
-                                <input type="subject" placeholder="Enter Subject *" name="subject" id="subject">
-                            </div>
-
-                            <div class="validation-container" id="subject-required-text" style="display: none;">
-                                <h3><strong>This is a required field *</strong></h3>
-                            </div>
-
-                            <div class="form-element">
-                                <textarea id="message" placeholder="Message *"></textarea>
-                            </div>
-
-                            <div class="validation-container" id="message-required-text" style="display: none;">
-                                <h3><strong>This is a required field *</strong></h3>
-                            </div>
-
-                            <a href="#form-element">
-                                <div class="button">
-                                    <p>SUBMIT</p>
-                                </div>
-                            </a>
-                        </form>
+                                </a>
+                            </form>
+                        </div>
+                        <!-- form -->
                     </div>
-                    <!-- form -->
+                </div>
+                <div class="scroll-bottom">
+                    <a href="index.html#top">
+                        <img src="img/down-white-arrow-chevron-label-text-triangle-symbol-transparent-png-1040505.png" class="up">
+                    </a>
                 </div>
             </div>
-            <div class="scroll-bottom">
-                <a href="index.html#top">
-                    <img src="img/down-white-arrow-chevron-label-text-triangle-symbol-transparent-png-1040505.png" class="up">
-                </a>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/validation.js"></script>

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.main-container {
+    display: flex;
+}
+
 //Makes the main section scroll and the nav stays put. This is used for vertical scrolling. 
 main {
     //    overflow-y: scroll;

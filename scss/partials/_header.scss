@@ -146,11 +146,13 @@
         //Size and padding on the text.
         h2 {
             padding-top: 15px;
-            font-size: 35px;
+            font-size: 30px;
+            // 35
         }
         h1 {
             padding-top: 15px;
-            font-size: 100px;
+            font-size: 80px;
+            // 100
         }
         h3 {
             padding-top: 15px;
@@ -158,62 +160,62 @@
         }
     }
     
-    .menu-position {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-        padding-right: 20px;
-        padding-top: 20px;
-    }
-    
-    .menu-btn {
-        width: 63px;
-        height: 53px;
-        color: white;
-        padding: 5px 14px;
-        line-height: 1.5;
-        margin-left: 20px;
-        background-color: #151a1e;
-        border-radius: 3px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        // Burger Container
-        .burger-container {
-            position: relative;
-            width: 100%;
-            margin: auto 0;
-            // border: 2px solid green; 
-            // Burger Lines
-            .menu-burger {
-                display: block;
-                position: relative;
-                width: 40px;
-                height: 6px;
-                background-color: white;
-                &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    width: 40px;
-                    height: 6px;
-                    background-color: white;
-                }
-                // Moves other 2 bars in correct position
-                &::before {
-                    content: "";
-                    transform: translateY(-15px);
-                }
-                &::after {
-                    content: "";
-                    transform: translateY(15px);
-                }
-            }
-        }
-    }
-    
+    // .menu-position {
+    //     display: flex;
+    //     width: 100%;
+    //     justify-content: flex-end;
+    //     padding-right: 20px;
+    //     padding-top: 20px;
+    // }
+    // .menu-btn {
+    //     width: 63px;
+    //     height: 53px;
+    //     color: white;
+    //     padding: 5px 14px;
+    //     line-height: 1.5;
+    //     // margin-left: 20px;
+    //     background-color: #16181a;
+    //     border-radius: 3px;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     // Burger Container
+    //     .burger-container {
+    //         position: relative;
+    //         width: 100%;
+    //         margin: auto auto;
+    //         // border: 2px solid green; 
+    //         // Burger Lines
+    //         .menu-burger {
+    //             display: block;
+    //             position: relative;
+    //             width: 35px;
+    //             height: 4px;
+    //             border-radius: 3px;
+    //             background-color: white;
+    //             &::before,
+    //             &::after {
+    //                 content: "";
+    //                 position: absolute;
+    //                 left: 0;
+    //                 border-radius: 3px;
+    //                 width: 35px;
+    //                 height: 4px;
+    //                 background-color: white;
+    //             }
+    //             // Moves other 2 bars in correct position
+    //             &::before {
+    //                 content: "";
+    //                 transform: translateY(-12px);
+    //             }
+    //             &::after {
+    //                 content: "";
+    //                 transform: translateY(12px);
+    //             }
+    //         }
+    //     }
+    // }
     .scroll-bottom {
         display: flex;
         flex-direction: column;
@@ -232,28 +234,36 @@
     
     //Allowing the nav to appear at the correct size and making the main element the correct size. 
     @media screen and (min-width: $large) {
+        .banner-container {
+            h1 {
+                font-size: 100px;
+            }
+            h2 {
+                font-size: 35px;
+            }
+        }
         main {
             margin-left: 250px;
-            width: calc(100vw - 250px);
+            width: calc(100% - 250px);
         }
         .main-nav {
             display: flex;
         }
-        .menu-position {
-            display: none;
-        }
+        // .menu-position {
+        //     display: none;
+        // }
     }
     
     @media screen and (min-width: $medium) {
-        .menu-btn {
-            .menu-burger {
-                width: 33px;
-                height: 3px;
-                &::before,
-                &::after {
-                    width: 33px;
-                    height: 3px;
-                }
-            }
-        }
+        // .menu-btn {
+        //     .menu-burger {
+        //         width: 33px;
+        //         height: 3px;
+        //         &::before,
+        //         &::after {
+        //             width: 33px;
+        //             height: 3px;
+        //         }
+        //     }
+        // }
     }
